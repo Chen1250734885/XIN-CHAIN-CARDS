@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "未继续使用（40日内）",
+  "navigationBarBackgroundColor": "#1678FF",
+  "usingComponents": {
+    "uni-popup": "/components/uni-popup/uni-popup"
+  }
+}

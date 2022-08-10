@@ -1,0 +1,149 @@
+
+page {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.content2 {
+	padding: 30rpx;
+	line-height: 50rpx;
+}
+.grace-dialog-buttons {
+	width: 700rpx;
+	line-height: 88rpx;
+	height: 88rpx;
+	display: block;
+	overflow: hidden;
+	text-align: center;
+	font-size: 26rpx;
+	color: #999999;
+}
+.sk {
+	width: 690rpx;
+	height: 250rpx;
+	background-color: #FFFFFF;
+	border-radius: 10rpx;
+	margin: 20rpx 30rpx;
+}
+.sk_2 {
+	width: 690rpx;
+	height: 200rpx;
+	background-color: #FFFFFF;
+	border-radius: 10rpx;
+	margin: 20rpx 30rpx;
+}
+.sk_3 {
+	width: 690rpx;
+	height: 100rpx;
+	background-color: #FFFFFF;
+	border-radius: 10rpx;
+	margin-left: 30rpx;
+}
+.money {
+	padding-top: 45rpx;
+}
+.Receivables {
+	padding-top: 24rpx;
+}
+.money_s {
+	font-size: 31rpx;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: rgba(51, 51, 51, 1);
+	margin-left: 39rpx;
+}
+.mony {
+	padding-top: 20rpx;
+	margin-left: 40rpx;
+}
+.ables {
+	font-size: 31rpx;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: rgba(51, 51, 51, 1);
+	margin-left: 45rpx;
+}
+.zhanghu {
+	margin-top: 19rpx;
+	margin-left: 136rpx;
+	-webkit-transform: translateY(15rpx);
+	        transform: translateY(15rpx);
+}
+.daozhang {
+	font-size: 24rpx;
+	font-family: PingFang SC;
+	font-weight: 400;
+	color: rgba(51, 51, 51, 1);
+	margin-left: 45rpx;
+}
+.sz {
+	position: fixed;
+	margin-left: 120rpx;
+	font-size: 30rpx;
+	color: #999999;
+}
+.sz_t {
+	position: fixed;
+	margin-left: 120rpx;
+	font-size: 30rpx;
+	color: #333333;
+}
+.sxf {
+	position: fixed;
+	margin-left: 236rpx;
+	font-size: 24rpx;
+	color: #333333;
+	-webkit-transform: translateY(5rpx);
+	        transform: translateY(5rpx);
+}
+.szs_2 {
+	margin-left: 440rpx;
+	font-size: 30rpx;
+	color: #999999;
+}
+.szs_2t {
+	margin-left: 440rpx;
+	font-size: 30rpx;
+	color: #333333;
+}
+.quota {
+	padding-top: 18rpx;
+	margin-left: 42rpx;
+}
+.quota_2 {
+	margin-bottom: 17rpx;
+	margin-left: 42rpx;
+}
+.quor {
+
+	font-size: 24rpx;
+	color: rgba(51, 51, 51, 1);
+}
+.quor_2 {
+	font-size: 24rpx;
+	color: rgba(51, 51, 51, 1);
+	/* margin-right: 125rpx; */
+}
+.skbut {
+	margin-top: 169rpx;
+}
+.bon {
+	width: 550rpx;
+	height: 96rpx;
+	background-color: #1678FF;
+	border-radius: 10rpx;
+	font-size: 32rpx;
+	line-height: 96rpx;
+	color: #FFFFFF;
+}
+.imst {
+	width: 58rpx;
+	height: 60rpx;
+	/* background-color: #00B3FF; */
+	display: inline-block;
+	float: left;
+	margin-left: -79rpx;
+	-webkit-transform: translateY(-11rpx);
+	        transform: translateY(-11rpx);
+}
+

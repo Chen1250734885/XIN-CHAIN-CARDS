@@ -1,0 +1,12 @@
+{
+  "titleNView": true,
+  "bounce": "none",
+  "scrollIndicator": "none",
+  "navigationStyle": "default",
+  "navigationBarTitleText": "分享",
+  "navigationBarBackgroundColor": "#2483F5",
+  "usingComponents": {
+    "grace-page": "/graceUI/components/gracePage",
+    "grace-bottom-dialog": "/graceUI/components/graceBottomDialog"
+  }
+}

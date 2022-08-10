@@ -1,0 +1,31 @@
+
+.content2 {
+	padding: 30rpx;
+	line-height: 50rpx;
+}
+.grace-dialog-buttons {
+	width: 700rpx;
+	line-height: 88rpx;
+	height: 88rpx;
+	display: block;
+	text-align: center;
+	font-size: 26rpx;
+	color: #999999;
+}
+.jindutiao {
+	margin-top: 17rpx;
+	margin-left: 77rpx;
+	margin-right: 15rpx;
+}
+.tepst {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 250rpx;
+	color: rgba(255, 255, 255, 1);
+	/* background: -webkit-linear-gradient(left, transparent, #fff 55%); */
+	/* 	background: -o-linear-gradient(right, transparent, #fff 55%);
+		background: -moz-linear-gradient(right, transparent, #fff 55%);
+		background: linear-gradient(to right, transparent, #fff 55%); */
+}
+

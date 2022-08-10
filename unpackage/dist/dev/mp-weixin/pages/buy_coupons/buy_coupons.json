@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "购买优惠券",
+  "navigationBarBackgroundColor": "#2483F5",
+  "usingComponents": {
+    "grace-page": "/graceUI/components/gracePage"
+  }
+}

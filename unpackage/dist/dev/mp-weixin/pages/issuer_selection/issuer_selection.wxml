@@ -1,0 +1,1 @@
+<view><grace-full-loading vue-id="42619380-1" text="暂无可选银行" logoUrl="../../static/login2.png" graceFullLoading="{{graceFullLoading}}" bind:__l="__l"></grace-full-loading><phone-directory vue-id="42619380-2" fakahang="{{fakahang}}" phones="{{phones}}" data-event-opts="{{[['^paramClick',[['paramClick']]]]}}" bind:paramClick="__e" bind:__l="__l"></phone-directory></view>

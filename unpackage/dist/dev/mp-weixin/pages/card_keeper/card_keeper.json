@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "信用卡管家",
+  "navigationBarBackgroundColor": "#1678FF",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "grace-page": "/graceUI/components/gracePage",
+    "grace-dialog": "/graceUI/components/graceDialog",
+    "cmd-progress": "/components/cmd-progress/cmd-progress",
+    "cmd-circle": "/components/cmd-circle/cmd-circle"
+  }
+}

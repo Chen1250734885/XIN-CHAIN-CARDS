@@ -1,0 +1,10 @@
+
+.grace-nav-bar.data-v-0dc6c500{width:100%; display:flex; white-space:nowrap;}
+.nav-item.data-v-0dc6c500{width:100rpx; display:inline-flex; flex-direction:column;}
+.nav-item-title.data-v-0dc6c500{font-size:28rpx; line-height:50rpx; width:100%; color:#333333;}
+.nav-active.data-v-0dc6c500{font-size:30rpx;
+}
+.nav-active-line-wrap.data-v-0dc6c500{display:flex;}
+.nav-active-line.data-v-0dc6c500{width:36rpx; height:6rpx; margin-top:5rpx;}
+.grace-nav-center.data-v-0dc6c500{justify-content:space-between; text-align:center;}
+

@@ -1,0 +1,64 @@
+
+.content2 {
+	padding: 30rpx;
+	line-height: 50rpx;
+}
+.grace-dialog-buttons {
+	width: 700rpx;
+	line-height: 88rpx;
+	height: 88rpx;
+	display: block;
+	overflow: hidden;
+	text-align: center;
+	font-size: 26rpx;
+	color: #999999;
+}
+.bishuf {
+	width: 374rpx;
+	height: 60rpx;
+	background-color: #FFFFFF;
+	margin-top: 1rpx;
+	display: flex;
+	justify-content: space-between;
+	line-height: 60rpx;
+}
+.shouxuf {
+	width: 374rpx;
+	height: 60rpx;
+	background-color: #FFFFFF;
+	margin-top: 1rpx;
+	display: flex;
+	justify-content: space-between;
+	line-height: 60rpx;
+}
+.popup {
+	width: 500rpx;
+	height: 400rpx;
+	background-color: #FFFFFF;
+	border-radius: 10rpx;
+}
+.qures {
+	display: inline-block;
+	width: 250rpx;
+	height: 70rpx;
+	background-color: rgba(80, 160, 254, 1);
+	border-radius: 0 0 0 10rpx;
+	margin-top: 48rpx;
+	line-height: 70rpx;
+	text-align: center;
+	font-size: 34rpx;
+	color: #FFFFFF;
+}
+.quxioa {
+	display: inline-block;
+	width: 250rpx;
+	height: 70rpx;
+	background-color: rgba(80, 187, 254, 1);
+	border-radius: 0 0 10rpx 0;
+	margin-top: 48rpx;
+	line-height: 70rpx;
+	text-align: center;
+	font-size: 34rpx;
+	color: #FFFFFF;
+}
+

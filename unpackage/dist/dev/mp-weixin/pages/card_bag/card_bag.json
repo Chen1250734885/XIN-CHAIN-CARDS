@@ -1,0 +1,13 @@
+{
+  "titleNView": false,
+  "titleSize": 30,
+  "bounce": "none",
+  "scrollIndicator": "none",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "grace-page": "/graceUI/components/gracePage",
+    "grace-nav-bar": "/graceUI/components/graceNavBar",
+    "grace-header": "/graceUI/components/graceHeader",
+    "grace-dialog": "/graceUI/components/graceDialog"
+  }
+}

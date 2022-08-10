@@ -1,0 +1,33 @@
+
+.kef_s {
+	position: absolute;
+	top: 550rpx;
+	left: 598rpx;
+	z-index: 9999;
+	float: right;
+}
+.weimas{
+	width: 750rpx;
+	height: 100rpx;
+	background-color: #FFFFFF;
+	margin-top: 5rpx;
+}
+.weimass{
+	width: 750rpx;
+	height: 100rpx;
+	background-color: #FFFFFF;
+	margin-top: 10rpx;
+	line-height: 100rpx;
+}
+.quxioas{
+	width: 750rpx;
+	height: 80rpx;
+	background-color: #FFFFFF;
+	line-height: 80rpx;
+	text-align: center;
+	font-size: 32rpx;
+	color: rgba(0, 0, 0, 1);
+	position: absolute;
+	bottom: 0;
+}
+

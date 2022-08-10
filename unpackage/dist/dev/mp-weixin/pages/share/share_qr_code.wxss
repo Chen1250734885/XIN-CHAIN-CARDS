@@ -1,0 +1,23 @@
+
+.grace-dialog-buttons {
+	width: 150rpx;
+	line-height: 88rpx;
+	height: 88rpx;
+	display: block;
+	overflow: hidden;
+	text-align: center;
+	font-size: 26rpx;
+	color: #999999;
+}
+.quxioas {
+	width: 750rpx;
+	height: 80rpx;
+	background-color: #FFFFFF;
+	line-height: 80rpx;
+	text-align: center;
+	font-size: 32rpx;
+	color: rgba(0, 0, 0, 1);
+	position: absolute;
+	bottom: 0;
+}
+

@@ -1,0 +1,37 @@
+
+.jianrs{
+	width: 41rpx;
+	height: 41rpx;
+}
+.jiars{
+	width: 41rpx;
+	height: 41rpx;
+	margin-left: 185rpx;
+}
+.numsl{
+	position: absolute;
+	margin-left: 69rpx;
+	font-size: 36rpx;
+}
+.confirm{
+	width: 750rpx;
+	height: 194rpx;
+	background: #FFFFFF;	
+	margin-top: 78rpx;
+	text-align: center;
+}
+.confirm2{
+	width: 385rpx;
+	height: 73rpx;
+	background: #FF1217;
+	border-radius: 20rpx;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 35rpx;
+	line-height: 73rpx;
+	margin: auto;
+	-webkit-transform: translateY(57rpx);
+	        transform: translateY(57rpx);
+}
+
+

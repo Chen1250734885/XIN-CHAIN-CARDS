@@ -1,0 +1,70 @@
+
+.kef_s {
+  position: absolute;
+  top: 450rpx;
+  left: 598rpx;
+  z-index: 9999;
+  float: right;
+}
+.ui-car-name-list {
+  width: 750rpx;
+  height: 87rpx;
+  background-color: rgba(36, 131, 245, 1);
+}
+.ui-car-name-item {
+  width: 140rpx;
+  height: 83rpx;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 30rpx;
+  margin-left: 150rpx;
+}
+.active {
+  border-bottom: 5rpx solid #ffffff;
+  line-height: 85rpx;
+}
+.cehuis {
+  width: 750rpx;
+  height: 120rpx;
+  background-color: #ffffff;
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.imgsa {
+  display: inline-block;
+  width: 156rpx;
+  height: 80rpx;
+  margin-left: 24rpx;
+  margin-top: 10rpx;
+  border-radius: 5rpx;
+}
+.bianhs {
+  font-size: 22rpx;
+  color: rgba(153, 153, 153, 1);
+  margin-top: -10rpx;
+  margin-left: 24rpx;
+}
+.stes {
+  font-size: 30rpx;
+  color: rgba(255, 96, 0, 1);
+  /* position: absolute;
+		top: 40rpx;
+		left: 202rpx; */
+  position: relative;
+  margin-left: 20rpx;
+  top: -25rpx;
+}
+.ann_cehui {
+  width: 140rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid rgba(238, 16, 16, 1);
+  font-size: 22rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: rgba(238, 16, 16, 1);
+  margin-left: 50rpx;
+  margin-top: 10rpx;
+}
+

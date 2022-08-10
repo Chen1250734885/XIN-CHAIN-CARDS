@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "还款计划",
+  "usingComponents": {
+    "ei-calendar": "/components/ei-calendar/ei-calendar",
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "grace-dialog": "/graceUI/components/graceDialog",
+    "min-popup": "/components/min-popup/min-popup"
+  }
+}

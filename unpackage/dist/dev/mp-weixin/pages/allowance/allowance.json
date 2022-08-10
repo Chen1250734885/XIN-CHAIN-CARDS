@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "抵用券选择",
+  "usingComponents": {
+    "grace-page": "/graceUI/components/gracePage",
+    "grace-shade": "/graceUI/components/graceShade"
+  }
+}

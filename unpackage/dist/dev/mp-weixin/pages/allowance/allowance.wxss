@@ -1,0 +1,19 @@
+
+.weixuan {
+  background: rgba(247, 247, 247, 1);
+}
+.xuanzhong {
+  background: rgba(251, 217, 81, 1);
+}
+.demo-msg {
+  width: 500rpx;
+}
+.close-btn {
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 40rpx;
+  z-index: 7;
+}
+

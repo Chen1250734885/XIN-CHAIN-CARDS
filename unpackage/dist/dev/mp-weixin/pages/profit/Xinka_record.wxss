@@ -1,0 +1,10 @@
+
+.jilist_biao {
+	width: 750rpx;
+	height: 120rpx;
+	background-color: #FFFFFF;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1rpx;
+}
+

@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "生成计划",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#1678FF",
+  "usingComponents": {
+    "ei-calendar": "/components/ei-calendar/ei-calendar",
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "grace-page": "/graceUI/components/gracePage",
+    "grace-dialog": "/graceUI/components/graceDialog",
+    "grace-address-picker": "/graceUI/components/graceAddressPicker"
+  }
+}

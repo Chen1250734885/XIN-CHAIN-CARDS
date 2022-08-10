@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "分享二维码",
+  "usingComponents": {
+    "grace-page": "/graceUI/components/gracePage",
+    "grace-bottom-dialog": "/graceUI/components/graceBottomDialog"
+  }
+}

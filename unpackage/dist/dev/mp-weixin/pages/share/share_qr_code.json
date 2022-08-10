@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "分享二维码",
+  "navigationBarBackgroundColor": "#1678FF",
+  "usingComponents": {
+    "grace-page": "/graceUI/components/gracePage",
+    "grace-bottom-dialog": "/graceUI/components/graceBottomDialog"
+  }
+}

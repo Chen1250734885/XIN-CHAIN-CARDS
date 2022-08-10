@@ -1,0 +1,9 @@
+{
+  "titleNView": true,
+  "bounce": "none",
+  "scrollIndicator": "none",
+  "navigationStyle": "default",
+  "navigationBarTitleText": "我的",
+  "navigationBarBackgroundColor": "#1678FF",
+  "usingComponents": {}
+}

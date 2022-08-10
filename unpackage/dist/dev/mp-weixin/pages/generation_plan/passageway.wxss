@@ -1,0 +1,29 @@
+
+.content2 {
+	padding: 30rpx;
+	line-height: 50rpx;
+}
+.grace-dialog-buttons {
+	width: 700rpx;
+	line-height: 88rpx;
+	height: 88rpx;
+	display: block;
+	overflow: hidden;
+	text-align: center;
+	font-size: 26rpx;
+	color: #999999;
+}
+.sc_huik {
+	width: 400rpx;
+	height: 100rpx;
+	background-color: #1678FF;
+	color: #FFFFFF;
+	font-size: 30rpx;
+	position: absolute;
+	/* bottom: 50rpx; */
+	margin-left: 200rpx;
+	line-height: 100rpx;
+	margin-top: 50rpx;
+	margin-bottom: 20rpx;
+}
+

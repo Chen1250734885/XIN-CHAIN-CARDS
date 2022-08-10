@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "修改信用卡",
+  "navigationBarBackgroundColor": "#1678FF",
+  "usingComponents": {
+    "w-picker": "/components/w-picker/w-picker",
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "grace-page": "/graceUI/components/gracePage"
+  }
+}

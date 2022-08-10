@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "抵用券选择",
+  "navigationBarBackgroundColor": "#2483F5",
+  "usingComponents": {
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "grace-page": "/graceUI/components/gracePage",
+    "grace-shade": "/graceUI/components/graceShade",
+    "grace-bottom-dialog": "/graceUI/components/graceBottomDialog",
+    "grace-dialog": "/graceUI/components/graceDialog"
+  }
+}

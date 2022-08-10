@@ -1,0 +1,32 @@
+<template>
+	<gracePage :customHeader="false">
+			<!-- 页面主体 -->
+			<view slot="gBody">
+				<view style="margin-top: 43rpx; background-image: url(../../static/logo_bgss.png);width: 750rpx;height: 450rpx;background-size:cover;" >
+				<text class="grace-flex-center" style="position: relative;top: 170rpx; font-size:42rpx;font-weight:bold;color:rgba(254,255,254,1);">您未实名认证</text>
+				<button @tap="Goto('/pages/authentication/authentication1')" style="width:240rpx;height:60rpx;background:rgba(255,255,255,1);border-radius:30rpx;font-size:28rpx;font-weight:500;color:#333333;line-height:60rpx;position: relative;top: 240rpx;">立即实名</button>
+				</view>
+			</view>
+	</gracePage>
+</template>
+
+<script>
+	import gracePage from "../../graceUI/components/gracePage.vue";
+	export default {
+		data() {
+			return {}
+		},
+		onLoad:function(){},
+		onUnload() {
+			uni.switchTab({
+				url:'/pages/personal_center/personal_center'
+			})
+		},
+		components:{
+			gracePage
+		}
+	}
+</script>
+
+<style>
+</style>

@@ -1,0 +1,117 @@
+
+.bhan {
+	display: flex;
+	justify-content: space-between;
+}
+.bianhao {
+	float: left;
+	margin-top: -65rpx;
+	z-index: 99;
+	color: rgba(250, 146, 52, 1);
+	font-size: 29rpx;
+	margin-left: 120rpx;
+}
+.bianx {
+	margin-right: 90rpx;
+}
+.btn {
+	display: inline-block;
+	/* float: right; */
+	width: 120rpx;
+	height: 35rpx;
+	font-size: 22rpx;
+	line-height: 35rpx;
+	-webkit-transform: translateY(-60rpx);
+	        transform: translateY(-60rpx);
+	background-color: #000000;
+	color: #FFFFFF;
+	border: 1rpx solid #FFFFFF;
+	text-align: center;
+	border-radius: 10rpx;
+	/* margin-right: 18rpx; */
+}
+.tabk {
+	width: 540rpx;
+	height: 340rpx;
+	background-color: #FFFFFF;
+	border-radius: 10rpx;
+}
+.tabk_b {
+	font-size: 32rpx;
+	margin-left: 180rpx;
+	-webkit-transform: translateY(40rpx);
+	        transform: translateY(40rpx);
+}
+.tabk_x {
+	margin-top: 10rpx;
+	font-size: 32rpx;
+	margin-left: 120rpx;
+	-webkit-transform: translateY(40rpx);
+	        transform: translateY(40rpx);
+}
+.tabk_y {
+	font-size: 32rpx;
+	margin-left: 180rpx;
+	-webkit-transform: translateY(40rpx);
+	        transform: translateY(40rpx);
+}
+.tabk_k {
+	font-size: 22rpx;
+	margin-left: 120rpx;
+	-webkit-transform: translateY(40rpx);
+	        transform: translateY(40rpx);
+	color: rgba(154, 154, 154, 1);
+	margin-top: 21rpx;
+}
+.bnts {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 82rpx;
+}
+.qr_s {
+	width: 270rpx;
+	height: 70rpx;
+	line-height: 70rpx;
+	background-color: rgba(80, 160, 254, 1);
+	font-size: 34rpx;
+	color: #FFFFFF;
+	border-radius: 0 0 0 10rpx;
+	text-align: center;
+}
+.qx_s {
+	width: 270rpx;
+	height: 70rpx;
+	line-height: 70rpx;
+	background-color: rgba(80, 187, 254, 1);
+	font-size: 34rpx;
+	color: #FFFFFF;
+	border-radius: 0 0 10rpx 0;
+	text-align: center;
+}
+.covse {
+	/* position:absolute;left:0rpx;top:0rpx; */
+	margin-top: -250rpx;
+	background: rgba(0, 0, 0, 1);
+	width: 580rpx;
+	/*宽度设置为100%，这样才能使隐藏背景层覆盖原页面*/
+	height: 270rpx;
+	filter: alpha(opacity=60);
+	/*设置透明度为60%*/
+	opacity: 0.5;
+	/*非IE浏览器下设置透明度为60%*/
+	/* display: none; */
+	-webkit-transform: translateY(-40rpx);
+	        transform: translateY(-40rpx);
+	margin-left: 85rpx;
+	z-Index: 9;
+	border-radius: 20rpx;
+	text-align: center;
+}
+.wqann {
+	position: absolute;
+	top: 957rpx;
+	right: 0;
+	margin-right: 15rpx;
+	z-index: 99;
+}
+

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "修改储蓄卡",
+  "navigationBarBackgroundColor": "#2483F5",
+  "usingComponents": {
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "grace-page": "/graceUI/components/gracePage"
+  }
+}

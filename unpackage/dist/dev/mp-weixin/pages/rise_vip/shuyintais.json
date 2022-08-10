@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "收银台",
+  "navigationBarBackgroundColor": "#2483F5",
+  "usingComponents": {
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "grace-dialog": "/graceUI/components/graceDialog",
+    "grace-page": "/graceUI/components/gracePage",
+    "grace-bottom-dialog": "/graceUI/components/graceBottomDialog",
+    "grace-address-picker": "/graceUI/components/graceAddressPicker"
+  }
+}

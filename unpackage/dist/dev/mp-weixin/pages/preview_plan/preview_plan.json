@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "预览计划",
+  "navigationBarBackgroundColor": "#2483F5",
+  "usingComponents": {
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "grace-page": "/graceUI/components/gracePage",
+    "grace-dialog": "/graceUI/components/graceDialog",
+    "date-time-picker": "/components/bory-dateTimePicker/bory-dateTimePicker"
+  }
+}

@@ -1,0 +1,151 @@
+
+page {
+  background-color: rgba(36, 131, 245, 1);
+  overflow: hidden;
+  height: 100%;
+}
+.huiyuan {
+  position: absolute;
+  width: 750rpx;
+  height: 1000rpx;
+  bottom: 0;
+}
+.title_1 {
+  width: 73rpx;
+  height: 2rpx;
+  background-color: #ffffff;
+  position: absolute;
+  left: 204rpx;
+  top: 74rpx;
+}
+.titlequ {
+  font-size: 38rpx;
+  color: #ffffff;
+  margin-top: 46rpx;
+  text-align: center;
+}
+.title_2 {
+  width: 73rpx;
+  height: 2rpx;
+  background-color: #ffffff;
+  position: absolute;
+  left: 470rpx;
+  top: 75rpx;
+}
+.zhuancx {
+  font-size: 115.3rpx;
+  color: #ffffff;
+  text-align: center;
+}
+.zhuancx_2 {
+  font-size: 59.99rpx;
+  color: #ffffff;
+  text-align: center;
+}
+.zhuancx_3 {
+  font-size: 24rpx;
+  color: #ffffff;
+  text-align: center;
+}
+.guizhe {
+  position: absolute;
+  right: 0;
+  width: 140rpx;
+  height: 50rpx;
+  background: rgba(253, 197, 77, 1);
+  box-shadow: 0rpx 2rpx 4rpx 0rpx rgba(119, 53, 0, 0.5);
+  border-radius: 10rpx 0rpx 0rpx 10rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: rgba(255, 255, 255, 1);
+}
+.linqu {
+  position: absolute;
+  top: 179rpx;
+  left: 240.99rpx;
+  font-size: 34rpx;
+  color: rgba(255, 70, 75, 1);
+  z-index: 99;
+}
+.linqu_1 {
+  position: absolute;
+  top: 231rpx;
+  left: 105rpx;
+  font-size: 28rpx;
+  color: rgba(196, 120, 50, 1);
+  z-index: 99;
+}
+.linqu_2 {
+  position: absolute;
+  top: 272rpx;
+  left: 104rpx;
+  font-size: 28rpx;
+  color: rgba(196, 120, 50, 1);
+  z-index: 99;
+}
+.linqu_2s {
+  position: absolute;
+  top: 310rpx;
+  left: 130rpx;
+  font-size: 28rpx;
+  color: rgba(196, 120, 50, 1);
+  z-index: 99;
+}
+.linqu_3 {
+  position: absolute;
+  top: 356rpx;
+  left: 104rpx;
+  font-size: 28rpx;
+  color: rgba(196, 120, 50, 1);
+  z-index: 99;
+}
+.linqu_3s {
+  position: absolute;
+  top: 389rpx;
+  left: 130rpx;
+  font-size: 28rpx;
+  color: rgba(196, 120, 50, 1);
+  z-index: 99;
+}
+
+/* 解释权UI样式放置地点 */
+.linqu_4 {
+  position: absolute;
+  top: 545rpx;
+  left: 111rpx;
+  width: 425rpx;
+  font-size: 18rpx;
+  color: rgba(196, 120, 50, 1);
+  z-index: 99;
+}
+.liqujd {
+  position: absolute;
+  width: 550rpx;
+  height: 160rpx;
+  background: rgba(0, 0, 0, 0.3);
+  /* opacity:0.4; */
+  border-radius: 10rpx;
+  margin: 34rpx 100rpx;
+  z-index: 99;
+}
+.liqujd_tit {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  color: #ffffff;
+}
+.jdt {
+  position: absolute;
+  top: -57rpx;
+  left: 4rpx;
+}
+.ann_linq {
+  position: absolute;
+  top: 750rpx;
+  left: 193rpx;
+  width: 368rpx;
+  height: 114rpx;
+  z-index: 99;
+}
+

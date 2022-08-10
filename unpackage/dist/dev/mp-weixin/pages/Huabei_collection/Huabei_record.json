@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "收款记录",
+  "usingComponents": {
+    "grace-page": "/graceUI/components/gracePage"
+  }
+}

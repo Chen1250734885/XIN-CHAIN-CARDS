@@ -1,0 +1,1 @@
+<grace-page vue-id="f4372d00-1" customHeader="{{false}}" bind:__l="__l" vue-slots="{{['gBody']}}"><view slot="gBody"><rich-text nodes="{{strings}}"></rich-text></view></grace-page>

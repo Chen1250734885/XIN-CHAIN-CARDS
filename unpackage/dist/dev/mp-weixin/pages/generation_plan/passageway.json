@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "通道",
+  "navigationBarBackgroundColor": "#1678FF",
+  "usingComponents": {
+    "grace-page": "/graceUI/components/gracePage",
+    "grace-dialog": "/graceUI/components/graceDialog"
+  }
+}

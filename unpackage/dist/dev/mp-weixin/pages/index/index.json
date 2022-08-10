@@ -1,0 +1,16 @@
+{
+  "titleNView": false,
+  "bounce": "none",
+  "scrollIndicator": "none",
+  "navigationStyle": "custom",
+  "navigationBarBackgroundColor": "#1678FF",
+  "usingComponents": {
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "grace-page": "/graceUI/components/gracePage",
+    "graceswipercard": "/graceUI/components/graceSwiperCard",
+    "grace-speaker": "/graceUI/components/graceSpeaker",
+    "grace-shade": "/graceUI/components/graceShade",
+    "grace-bottom-dialog": "/graceUI/components/graceBottomDialog",
+    "grace-dialog": "/graceUI/components/graceDialog"
+  }
+}

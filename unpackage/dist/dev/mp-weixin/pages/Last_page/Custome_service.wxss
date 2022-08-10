@@ -1,0 +1,114 @@
+
+.banner {
+	width: 660rpx;
+	height: 310rpx;
+	margin-top: 31rpx;
+	margin-left: 47rpx;
+}
+.rexians {
+	width: 660rpx;
+	height: 160rpx;
+	background-color: #FFFFFF;
+	border-radius: 16rpx;
+	margin-top: 42rpx;
+	margin-left: 47rpx;
+}
+.kfs {
+	width: 80rpx;
+	height: 80rpx;
+	-webkit-transform: translate(23rpx, 40rpx);
+	        transform: translate(23rpx, 40rpx);
+	display: inline-block;
+}
+.jianex {
+	display: inline-block;
+	width: 2rpx;
+	height: 80rpx;
+	background: rgba(215, 213, 213, 1);
+	-webkit-transform: translate(36rpx, 40rpx);
+	        transform: translate(36rpx, 40rpx);
+}
+.dianhuas {
+	line-height: 60rpx;
+	-webkit-transform: translate(151rpx, -70rpx);
+	        transform: translate(151rpx, -70rpx);
+}
+.jtst {
+	display: inline-block;
+	width: 18rpx;
+	height: 28rpx;
+	-webkit-transform: translate(607rpx, -140rpx);
+	        transform: translate(607rpx, -140rpx);
+}
+.fuwu {
+	width: 437rpx;
+	font-size: 24rpx;
+	color: rgba(153, 153, 153, 1);
+	margin-top: 308rpx;
+	margin-left: 157rpx;
+}
+.popup {
+	width: 500rpx;
+	height: 600rpx;
+	background-color: #FFFFFF;
+	border-radius: 10rpx;
+}
+.sharhaoy {
+	font-size: 34rpx;
+	color: rgba(51, 51, 51, 1);
+	text-align: center;
+	-webkit-transform: translateY(13rpx);
+	        transform: translateY(13rpx);
+}
+.sharhaoy_2 {
+	font-size: 24rpx;
+	color: rgba(51, 51, 51, 1);
+	text-align: center;
+	-webkit-transform: translateY(23rpx);
+	        transform: translateY(23rpx);
+}
+.img_fx {
+	width: 260rpx;
+	height: 384rpx;
+	margin-left: 140rpx;
+	margin-top: 30rpx;
+}
+.fx_an {
+	width: 500rpx;
+	height: 59rpx;
+	background-color: rgba(79, 159, 253, 1);
+	border-radius: 0 0 10rpx 10rpx;
+	margin-top: 15rpx;
+	text-align: center;
+	line-height: 59rpx;
+	font-size: 24rpx;
+	color: #FFFFFF;
+}
+
+/*包含以下四种的链接*/
+._a {
+	text-decoration: none;
+	font-size: 24rpx;
+	color: #FFFFFF;
+}
+
+/*正常的未被访问过的链接*/
+._a:link {
+	text-decoration: none;
+}
+
+/*已经访问过的链接*/
+._a:visited {
+	text-decoration: none;
+}
+
+/*鼠标划过(停留)的链接*/
+._a:hover {
+	text-decoration: none;
+}
+
+/* 正在点击的链接*/
+._a:active {
+	text-decoration: none;
+}
+

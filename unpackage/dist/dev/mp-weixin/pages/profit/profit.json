@@ -1,0 +1,12 @@
+{
+  "titleNView": false,
+  "enablePullDownRefresh": true,
+  "bounce": "none",
+  "scrollIndicator": "none",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "grace-page": "/graceUI/components/gracePage",
+    "dn-icon": "/components/dn-icon_1.2/component/dn-icon/dn-icon"
+  }
+}

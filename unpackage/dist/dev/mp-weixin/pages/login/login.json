@@ -1,0 +1,9 @@
+{
+  "titleNView": false,
+  "bounce": "none",
+  "scrollIndicator": "none",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "grace-page": "/graceUI/components/gracePage"
+  }
+}

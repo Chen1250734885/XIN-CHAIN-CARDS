@@ -1,0 +1,52 @@
+
+.xianqi {
+	width: 750rpx;
+	height: 180rpx;
+	background-color: #FFFFFF;
+	margin-top: 1rpx;
+}
+.xianqi_1 {
+	display: flex;
+	/* justify-content: space-between; */
+	margin-left: 60rpx;
+	margin-top: 20rpx;
+	margin-right: 75rpx;
+}
+.xianqi_2 {
+	display: flex;
+	/* justify-content: space-between; */
+	margin-left: 60rpx;
+	margin-top: 10rpx;
+	margin-right: 75rpx;
+}
+.timej {
+	width: 750rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	background-color: #FFFFFF;
+	margin-top: 10rpx;
+	font-size: 24rpx;
+}
+.huankuans {
+	width: 750rpx;
+	height: 90rpx;
+	line-height: 90rpx;
+	background-color: #FFFFFF;
+	margin-top: 1rpx;
+	font-size: 28rpx;
+	display: flex;
+	justify-content: space-between;
+}
+.xiaofeiv {
+	width: 750rpx;
+	height: 130rpx;
+	/* line-height: 120rpx; */
+	background-color: #FFFFFF;
+	font-size: 28rpx;
+	margin-top: 1rpx;
+}
+.xiaofeivs {
+	position: absolute;
+	left: 28rpx;
+}
+

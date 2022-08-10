@@ -1,0 +1,113 @@
+
+.xuanzhong{
+	width:320rpx;height:74rpx;border:5rpx solid rgba(48,207,0,1);box-shadow:2rpx 2rpx 0px 0px rgba(10,2,4,0.29);font-size:30rpx;font-weight:500;color:rgba(48,207,0,1);text-align: center;line-height: 74rpx;
+}
+.weixuanzhong{
+	width:320rpx;
+	height:74rpx;
+	border:2rpx solid rgba(153,153,153,1);
+	font-size:30rpx;
+	font-weight:500;
+	color:rgba(153,153,153,1);
+	text-align: center;
+	line-height: 74rpx;
+}
+.shenyuq{
+	color: #FFFFFF;
+	position: absolute;
+	z-index: 99;
+	left: 335rpx;
+	font-size: 18rpx;
+	margin-top: 150rpx;
+}
+.shenyuqr{
+	color: #FFFFFF;
+	position: absolute;
+	z-index: 99;
+	left: 335rpx;
+	font-size: 18rpx;
+	margin-top: 125rpx;
+}
+.chozhi{
+	display: inline-block;
+	width: 93rpx;
+	height: 48rpx;
+	background: linear-gradient(180deg, #FA2F51, #F2561F);
+	box-shadow: 0rpx 3rpx 2rpx 0rpx rgba(227, 29, 44, 0.26);
+	border-radius: 6rpx;
+	position: absolute;
+	left:609rpx;
+	margin-top: 54rpx;
+	z-index: 99;
+	font-size: 32rpx;
+	color: #FFFFFF;
+	text-align: center;
+}
+.zhuanras{
+	display: inline-block;
+	width: 93rpx;
+	height: 48rpx;
+	background: linear-gradient(180deg, #FA2F51, #F2561F);
+	box-shadow: 0rpx 3rpx 2rpx 0rpx rgba(227, 29, 44, 0.26);
+	border-radius: 6rpx;
+	position: absolute;
+	left:609rpx;
+	margin-top: 124rpx;
+	z-index: 99;
+	font-size: 32rpx;
+	color: #FFFFFF;
+	text-align: center;
+}
+.sulian{
+	font-size: 29rpx;
+	position: absolute;
+	top: 790rpx;
+	left: 471rpx;
+	color: #FFFFFF;
+}
+.suljian{
+	width: 43rpx;
+	height: 43rpx;
+	position: absolute;
+	top: 790rpx;
+	left: 373rpx;
+}
+.suljia{
+	width: 43rpx;
+	height: 43rpx;
+	position: absolute;
+	top: 790rpx;
+	left: 534rpx;
+}
+.qrcz{
+	width: 500rpx;
+	height: 98rpx;
+	background: #FFD957;
+	box-shadow: 0rpx 8rpx 0rpx 0rpx #EB9C11;
+	border-radius: 49rpx;
+	position: absolute;
+	top: 880rpx;
+	font-size: 48rpx;
+	text-align: center;
+	line-height: 95rpx;
+	color: #F53610;
+}
+.guanbi{
+	width: 70rpx;
+	height: 70rpx;
+	position: absolute;
+	top: 1120rpx;
+}
+.mingxi{
+	width: 130rpx;
+	height: 65rpx;
+	background: #FB1217;
+	box-shadow: 0rpx 4rpx 20rpx 0rpx rgba(251, 18, 23, 0.5);
+	border-radius: 33rpx 0rpx 0rpx 33rpx;
+	z-index: 999;
+	position: absolute;
+	top: 751rpx;
+	left: 620rpx;
+	text-align: center;
+}
+

@@ -1,0 +1,203 @@
+{
+	"name": "鑫琏卡",
+	"appid": "__UNI__D8CABBF",
+	"description": "",
+	"versionName": "1.4.5",
+	"versionCode": 110,
+	"transformPx": false,
+	/* 5+App特有相关 */
+	"app-plus": {
+		"usingComponents": true,
+		"nvueCompiler": "鑫琏卡",
+		"splashscreen": {
+			"alwaysShowBeforeRender": true,
+			"waiting": true,
+			"autoclose": true,
+			"delay": 0
+		},
+		/* 模块配置 */
+		"modules": {
+			"Share": {},
+			"Payment": {},
+			"OAuth": {}
+		},
+		/* 应用发布信息 */
+		"distribute": {
+			/* android打包配置 */
+			"android": {
+				"permissions": [
+					"<uses-feature android:name=\"android.hardware.camera\"/>",
+					"<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+					"<uses-permission android:name=\"android.permission.CAMERA\"/>",
+					"<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+					"<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+					"<uses-permission android:name=\"android.permission.INTERNET\"/>",
+					"<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+					"<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+					"<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+					"<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+					"<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+					"<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+					"<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+					"<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+					"<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+				],
+				"abiFilters": []
+			},
+			/* ios打包配置 */
+			"ios": {
+				"privacyDescription": {
+					"NSCameraUsageDescription": "用于银行卡识别",
+					"NSPhotoLibraryUsageDescription": "用于银行卡识别"
+				},
+				"capabilities": {
+					"entitlements": {
+						"com.apple.developer.associated-domains": [
+							"applinks:demo.dcloud.net.cn"] // 合并到工程entitlements文件的数据（json格式）  
+					},
+					"plists": {}
+				}
+			},
+			// 合并到工程Info.plist文件的数据（json格式）  
+			/* SDK配置 */
+			"sdkConfigs": {
+				"ad": {},
+				"share": {
+					"weixin": {
+						"appid": "wxb24098cba7182a96",
+						"UniversalLinks": "https://ext.dcloud.net.cn/plugin"
+					}
+				},
+				"payment": {
+					"weixin": {
+						"appid": "wxb24098cba7182a96",
+						"UniversalLinks": "https://ext.dcloud.net.cn/plugin"
+					},
+					"alipay": {}
+				},
+				"oauth": {
+					"apple": {}
+				}
+			},
+			"icons": {
+				"android": {
+					"hdpi": "static2/anzuo/72.png",
+					"xhdpi": "static2/anzuo/96.png",
+					"xxhdpi": "static2/anzuo/144.png",
+					"xxxhdpi": "static2/anzuo/192.png"
+				},
+				"ios": {
+					"appstore": "static2/anzuo/1024.png",
+					"ipad": {
+						"app": "static2/logo.png",
+						"app@2x": "unpackage/res/icons/152x152.png",
+						"notification": "unpackage/res/icons/20x20.png",
+						"notification@2x": "unpackage/res/icons/40x40.png",
+						"proapp@2x": "unpackage/res/icons/167x167.png",
+						"settings": "unpackage/res/icons/29x29.png",
+						"settings@2x": "unpackage/res/icons/58x58.png",
+						"spotlight": "unpackage/res/icons/40x40.png",
+						"spotlight@2x": "unpackage/res/icons/80x80.png"
+					},
+					"iphone": {
+						"app@2x": "static2/ios/120.png",
+						"app@3x": "static2/ios/180.png",
+						"notification@2x": "static2/ios/40.png",
+						"notification@3x": "static2/ios/60.png",
+						"settings@2x": "static2/ios/58.png",
+						"settings@3x": "static2/ios/87.png",
+						"spotlight@2x": "static2/ios/80.png",
+						"spotlight@3x": "static2/ios/120.png"
+					}
+				}
+			},
+			"splashscreen": {
+				"android": {
+					"hdpi": "",
+					"xhdpi": "static2/qindong.png",
+					"xxhdpi": ""
+				},
+				"ios": {
+					"iphone": {
+						"portrait-896h@3x": "static2/qindong.png",
+						"portrait-896h@2x": "static2/qindong.png",
+						"iphonex": "static2/qindong.png",
+						"retina55": "static2/qindong.png",
+						"retina47": "static2/qindong.png",
+						"retina40": "static2/qindong.png",
+						"retina35": "static2/qindong.png"
+					}
+				}
+			}
+		},
+		"nativePlugins": {
+			"DC-CardDetect": {
+				"__plugin_info__": {
+					"name": "证件识别——Android，iOS",
+					"description": "基于百度OCR制作的身份证正反面、银行卡、车牌号识别插件",
+					"platforms": "Android,iOS",
+					"url": "https://ext.dcloud.net.cn/plugin?id=135",
+					"android_package_name": "com.Xinlianka.odgj",
+					"ios_bundle_id": "com.xinlianka.odgj",
+					"isCloud": true,
+					"bought": 1,
+					"pid": "135",
+					"parameters": {}
+				}
+			}
+		}
+	},
+	/* 快应用特有相关 */
+	"quickapp": {},
+	/* 小程序特有相关 */
+	"mp-weixin": {
+		"appid": "",
+		"setting": {
+			"urlCheck": false
+		},
+		"usingComponents": true
+	},
+	"mp-alipay": {
+		"usingComponents": true
+	},
+	"mp-baidu": {
+		"usingComponents": true
+	},
+	"mp-toutiao": {
+		"usingComponents": true
+	},
+	"h5": {
+		"devServer": {
+			"https": false,
+			"proxy": {
+				"/ksy": {
+					"target": "http://ystb.xliank.com",
+					"changeOrigin": true,
+					"ws": true,
+					"pathRewrite": {
+						"^/ksy": ""
+					}
+				}
+			}
+		},
+		"router": {
+			"base": "/h5/",
+			"mode": "history"
+		},
+		"optimization": {
+			"treeShaking": {
+				"enable": false
+			}
+		},
+		"domain": "https://m.xliank.com/h5"
+	}
+}
+//ystb.xliank.com',

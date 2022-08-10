@@ -1,0 +1,84 @@
+
+.yhs{
+	width: 750rpx;
+	height: 220rpx;
+	background-color: #FFFFFF;
+	margin-bottom: 10rpx;
+}
+.leves{
+	display: flex;
+	justify-content: space-between;
+	-webkit-transform: translateY(15rpx);
+	        transform: translateY(15rpx);
+	margin: 0 24rpx;
+}
+.biaoji image{
+	position: absolute;
+	/* top: 120rpx; */
+	left: 690rpx;
+	width: 40rpx;
+	height: 40rpx;
+	margin-top: -60rpx;
+}
+.biaojis {
+	position: absolute;
+	left: 690rpx;
+	margin-top: -15rpx;
+	font-size: 22rpx;
+}
+.str{
+		font-size: 24rpx;
+		margin-top: 29rpx;
+		margin-left: 24rpx;
+}
+.bohao{
+		margin-top: 30rpx;
+		text-align: center;
+}
+.yijian{
+		font-size: 35rpx;
+		color: rgba(80, 160, 254, 1);
+}
+.tabk {
+		width: 540rpx;
+		height: 351rpx;
+		background-color: rgba(243, 243, 243, 1);
+		border-radius: 16rpx;
+}
+.tabks {
+		width: 540rpx;
+		height: 481rpx;
+		background-color: rgba(243, 243, 243, 1);
+		border-radius: 16rpx;
+}
+.tabkt {
+		width: 540rpx;
+		height: 221rpx;
+		background-color: rgba(243, 243, 243, 1);
+		border-radius: 16rpx;
+}
+.tabk_1 {
+		width: 540rpx;
+		height: 70rpx;
+		background-color: #FFFFFF;
+		border-radius: 16rpx 16rpx 0 0;
+		text-align: center;
+		/* transform: translateY(10rpx) */
+}
+.tabk_2 {
+		margin-top: 23rpx;
+		width: 540rpx;
+		height: 110rpx;
+		background-color: #FFFFFF;
+		text-align: center;
+		/* transform: translateY(-60rpx); */
+}
+.tabk_3 {
+		margin-top: 20rpx;
+		width: 540rpx;
+		height: 120rpx;
+		background-color: #FFFFFF;
+		text-align: center;
+		border-radius: 0 0 16rpx 16rpx;
+}
+

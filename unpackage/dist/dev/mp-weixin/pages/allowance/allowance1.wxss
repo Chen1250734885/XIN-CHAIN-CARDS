@@ -1,0 +1,4 @@
+
+.content2{padding:30rpx; line-height:50rpx;}
+.grace-dialog-buttons{width:700rpx; line-height:88rpx; height:88rpx; display:block; overflow:hidden; text-align:center; font-size:26rpx; color:#999999;}
+

@@ -1,0 +1,12 @@
+
+@-webkit-keyframes gradientBG-data-v-e73c7c62{0% {opacity:1;
+}
+50% { opacity:0.8;}
+80% { opacity:1;}}
+@keyframes gradientBG-data-v-e73c7c62{0% {opacity:1;
+}
+50% { opacity:0.8;}
+80% { opacity:1;}}
+.graceProgressButton.data-v-e73c7c62{position:relative; border-radius:0rpx; text-align:center; width:100%;}
+.ganimate.data-v-e73c7c62{-webkit-animation:gradientBG-data-v-e73c7c62 1.5s linear infinite;animation:gradientBG-data-v-e73c7c62 1.5s linear infinite;}
+

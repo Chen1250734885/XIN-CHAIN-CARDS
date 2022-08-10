@@ -1,0 +1,126 @@
+
+page {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.tb {
+	width: 80rpx;
+	height: 80rpx;
+	margin-left: 239rpx;
+}
+.yinx {
+	width: 100%;
+	height: 180rpx;
+	background-color: #FFFFFF;
+}
+.yinx_bz {
+	position: fixed;
+	width: 690rpx;
+	height: 130rpx;
+	border-radius: 20rpx;
+	background-color: #F98100;
+	margin: 25rpx 30rpx;
+}
+.yx {
+	width: 50rpx;
+	height: 50rpx;
+	/* background-color: #FFFFFF; */
+	margin-top: 38rpx;
+	margin-left: 46rpx;
+	float: left;
+}
+.mc {
+	margin-top: 37rpx;
+	margin-left: 19rpx;
+	font-size: 30rpx;
+	color: #FFFFFF;
+}
+.sz_2 {
+	width: 60rpx;
+	height: 22rpx;
+}
+.sz_2 image {
+	width: 100%;
+	height: 100%;
+	-webkit-transform: translateY(-10rpx);
+	        transform: translateY(-10rpx);
+}
+.xq {
+	width: 100%;
+	height: 120rpx;
+	background-color: #FFFFFF;
+	margin-top: 10rpx;
+}
+.an {
+	width: 100%;
+	height: 100%;
+	background-color: #FFFFFF;
+	margin-top: 2rpx;
+}
+.ty {
+	padding-top: 15rpx;
+	margin-left: 37rpx;
+}
+.an_jh {
+	margin-top: 228rpx;
+}
+.qxan {
+	width: 500rpx;
+	height: 90rpx;
+	background-color: #999999;
+	font-size: 28rpx;
+	color: #FFFFFF;
+	line-height: 90rpx;
+}
+.qran {
+	width: 500rpx;
+	height: 90rpx;
+	background-color: #1678FF;
+	font-size: 28rpx;
+	color: #FFFFFF;
+	line-height: 90rpx;
+	margin-top: 22rpx;
+}
+.qxan_lv {
+	width: 500rpx;
+	height: 90rpx;
+	background-color: #ffffff;
+	font-size: 28rpx;
+	color: #08D608;
+	line-height: 90rpx;
+	margin-top: 22rpx;
+}
+.qxan_hon {
+	width: 500rpx;
+	height: 90rpx;
+	background-color: #ffffff;
+	font-size: 28rpx;
+	color: red;
+	line-height: 90rpx;
+	margin-top: 22rpx;
+}
+.tx {
+	width: 680rpx;
+	height: 56rpx;
+	margin-left: 88rpx;
+	margin-top: 142rpx;
+}
+.txs {
+	width: 680rpx;
+	height: 56rpx;
+	margin-left: 150rpx;
+	margin-top: -20rpx;
+}
+.kf {
+	margin-top: 21rpx;
+}
+.phon {
+
+	width: 175rpx;
+	height: 40rpx;
+	margin-bottom: 129rpx;
+	margin-left: 307rpx;
+	margin-top: 21rpx;
+}
+

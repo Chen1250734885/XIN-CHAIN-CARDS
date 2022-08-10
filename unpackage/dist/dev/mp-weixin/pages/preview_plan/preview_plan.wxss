@@ -1,0 +1,118 @@
+
+.content2 {
+	padding: 30rpx;
+	line-height: 50rpx;
+}
+.grace-dialog-buttons {
+	width: 700rpx;
+	line-height: 88rpx;
+	height: 88rpx;
+	display: block;
+	overflow: hidden;
+	text-align: center;
+	font-size: 26rpx;
+	color: #999999;
+}
+.xianqi {
+	width: 750rpx;
+	height: 180rpx;
+	background-color: #FFFFFF;
+	margin-top: 1rpx;
+}
+.xianqi_1 {
+	display: flex;
+	/* justify-content: space-between; */
+	margin-left: 60rpx;
+	margin-top: 20rpx;
+	margin-right: 75rpx;
+}
+.xianqi_2 {
+	display: flex;
+	/* justify-content: space-between; */
+	margin-left: 60rpx;
+	margin-top: 10rpx;
+	margin-right: 75rpx;
+}
+.timej {
+	width: 750rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	background-color: #FFFFFF;
+	margin-top: 10rpx;
+	font-size: 24rpx;
+}
+.huankuans {
+	width: 750rpx;
+	height: 90rpx;
+	line-height: 90rpx;
+	background-color: #FFFFFF;
+	margin-top: 1rpx;
+	font-size: 28rpx;
+	display: flex;
+	justify-content: space-between;
+}
+.xiaofeiv {
+	width: 750rpx;
+	height: 130rpx;
+	background-color: #FFFFFF;
+	font-size: 28rpx;
+	margin-top: 1rpx;
+}
+.xiaofeivs {
+	position: absolute;
+	left: 28rpx;
+}
+.cxsc {
+	width: 200rpx;
+	height: 80rpx;
+	border: 1rpx solid #007AFF;
+	margin-left: 30rpx;
+	line-height: 80rpx;
+	color: #007AFF;
+	text-align: center;
+	display: inline-block;
+	margin-right: 80rpx;
+	border-radius: 6rpx;
+}
+.confirms {
+	display: inline-block;
+	width: 400rpx;
+	height: 80rpx;
+	background-color: #007AFF;
+	color: #FFFFFF;
+	line-height: 80rpx;
+	text-align: center;
+	border-radius: 6rpx;
+}
+.popup {
+	width: 440rpx;
+	height: 200rpx;
+	background-color: #FFFFFF;
+	border-radius: 10rpx;
+}
+.zhix_qr{
+	position: absolute;
+	bottom: 0;
+	width: 270rpx;
+	height: 70rpx;
+	background-color: rgba(79, 159, 254, 1);
+	border-radius: 0 0 0 10rpx;
+	text-align: center;
+	line-height: 70rpx;
+	color: #FFFFFF;
+	font-size: 34rpx;
+}
+.zhix_qx{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 270rpx;
+	height: 70rpx;
+	background-color: rgba(79, 186, 254, 1);
+	border-radius: 0 0 10rpx 0;
+	text-align: center;
+	line-height: 70rpx;
+	color: #FFFFFF;
+	font-size: 34rpx;
+}
+

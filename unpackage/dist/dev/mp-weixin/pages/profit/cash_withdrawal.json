@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "余额提现",
+  "navigationBarBackgroundColor": "#2483F5",
+  "usingComponents": {
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "grace-page": "/graceUI/components/gracePage",
+    "grace-bottom-dialog": "/graceUI/components/graceBottomDialog"
+  }
+}

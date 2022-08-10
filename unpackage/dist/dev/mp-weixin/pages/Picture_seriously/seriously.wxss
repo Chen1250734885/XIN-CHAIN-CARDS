@@ -1,0 +1,105 @@
+
+page{width:100%; height:100vh; display:flex; flex-direction:column;}
+.grace-sbody{
+	display:flex; flex-direction:column; width:100%; flex:1;
+}
+.grace-page-header{width:100%; position:fixed; left:0; top:0; z-index:99;}
+.grace-page-status-bar{width:100%; height:0;}
+.grace-page-header-nav{width:100%; display:flex; flex-direction:row; flex-wrap:nowrap; height:44px; align-items:center;}
+.grace-header-main{width:300rpx; flex:auto; overflow:hidden;}
+.grace-page-body{width:100%; flex:1; display:flex; flex-direction:column;}
+.grace-page-footer{width:100%; position:fixed; left:0; bottom:0; z-index:99;}
+.gui-page-rb-area{width:100rpx; position:fixed; right:20rpx; bottom:100rpx; z-index:100;}
+
+
+.sc {
+	width: 100%;
+	height: 640rpx;
+	background-color: #FFFFFF;
+}
+.zm {
+	display: inline-block;
+	width: 324rpx;
+	height: 252rpx;
+	background-color: #F4F8FE;
+	border-radius: 10rpx;
+	margin-left: 30rpx;
+	margin-top: 31rpx;
+}
+.bk {
+
+	width: 234rpx;
+	height: 152rpx;
+	border: 1rpx dashed #999999;
+	-webkit-transform: translateY(20rpx);
+	        transform: translateY(20rpx);
+	margin-left: 46rpx;
+}
+.ant {
+	width: 324rpx;
+	height: 60rpx;
+	background-color: #1678FF;
+	margin-top: 35rpx;
+	border-radius: 0rpx 0rpx 10rpx 10rpx;
+}
+.tisi {
+	width: 324rpx;
+	height: 60rpx;
+	background-color: #1678FF;
+	margin-top: 35rpx;
+	border-radius: 0rpx 0rpx 10rpx 10rpx;
+}
+.fm {
+	display: inline-block;
+	width: 324rpx;
+	height: 252rpx;
+	background-color: #F4F8FE;
+	border-radius: 10rpx;
+	margin-left: 30rpx;
+	margin-top: 31rpx;
+}
+.scti {
+	display: inline-block;
+	width: 324rpx;
+	height: 252rpx;
+	background-color: #F4F8FE;
+	border-radius: 10rpx;
+	margin-left: 30rpx;
+	-webkit-transform: translateY(20rpx);
+	        transform: translateY(20rpx);
+}
+.cxk {
+	display: inline-block;
+	width: 324rpx;
+	height: 252rpx;
+	background-color: #F4F8FE;
+	border-radius: 10rpx;
+	margin-left: 30rpx;
+	-webkit-transform: translateY(20rpx);
+	        transform: translateY(20rpx);
+}
+.yaoqiu {
+	width: 100%;
+	height: 320rpx;
+	background-color: #FFFFFF;
+	margin-top: 2rpx;
+}
+.icos {
+	width: 160rpx;
+	height: 95rpx;
+	background-color: #F2F7FE;
+}
+.item {
+	margin-left: 65rpx;
+	margin-top: -8rpx;
+}
+.sl {
+	display: inline-block;
+	margin-left: 30rpx;
+	margin-top: 24rpx;
+	margin-right: -17rpx;
+}
+.renz {
+	margin-top: 26rpx;
+}
+

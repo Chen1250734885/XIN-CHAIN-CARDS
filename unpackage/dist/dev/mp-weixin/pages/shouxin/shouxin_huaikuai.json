@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "授信还款",
+  "usingComponents": {
+    "cmd-circle": "/components/cmd-circle/cmd-circle",
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "cmd-progress": "/components/cmd-progress/cmd-progress"
+  }
+}

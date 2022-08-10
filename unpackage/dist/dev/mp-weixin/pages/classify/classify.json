@@ -1,0 +1,11 @@
+{
+  "titleNView": true,
+  "bounce": "none",
+  "scrollIndicator": "none",
+  "navigationStyle": "default",
+  "navigationBarTitleText": "交易中心",
+  "navigationBarBackgroundColor": "#2483F5",
+  "usingComponents": {
+    "grace-nav-bar": "/graceUI/components/graceNavBar"
+  }
+}

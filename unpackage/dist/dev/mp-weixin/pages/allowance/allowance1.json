@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "抵用卷选择",
+  "usingComponents": {
+    "grace-page": "/graceUI/components/gracePage",
+    "grace-bottom-dialog": "/graceUI/components/graceBottomDialog",
+    "grace-dialog": "/graceUI/components/graceDialog"
+  }
+}

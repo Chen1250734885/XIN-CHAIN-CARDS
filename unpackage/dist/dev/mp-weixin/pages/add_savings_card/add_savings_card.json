@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "添加储蓄卡",
+  "navigationBarBackgroundColor": "#1678FF",
+  "usingComponents": {
+    "grace-page": "/graceUI/components/gracePage"
+  }
+}

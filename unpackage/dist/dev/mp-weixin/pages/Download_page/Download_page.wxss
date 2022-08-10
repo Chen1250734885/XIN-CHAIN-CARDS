@@ -1,0 +1,17 @@
+
+page{background-color: #FFFFFF;}
+.tupb{
+	
+	/* background-color: #FFFFFF !important; */
+}
+.tubj{
+	width: 750rpx;
+	height: 1187rpx;
+}
+.xzan{
+	margin-top: 1087rpx !important;
+	background-color: #000000 !important;
+	width: 450rpx !important;
+	height: 100rpx !important;
+}
+

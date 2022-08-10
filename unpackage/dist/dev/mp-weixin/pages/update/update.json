@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "应用更新",
+  "navigationBarBackgroundColor": "#1678FF",
+  "bounce": "none",
+  "usingComponents": {
+    "grace-page": "/graceUI/components/gracePage",
+    "grace-progress-button": "/graceUI/components/graceProgressButton"
+  }
+}

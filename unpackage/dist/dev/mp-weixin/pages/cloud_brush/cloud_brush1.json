@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "T+0到账",
+  "navigationBarBackgroundColor": "#2483F5",
+  "usingComponents": {
+    "grace-dialog": "/graceUI/components/graceDialog",
+    "grace-page": "/graceUI/components/gracePage",
+    "grace-bottom-dialog": "/graceUI/components/graceBottomDialog"
+  }
+}

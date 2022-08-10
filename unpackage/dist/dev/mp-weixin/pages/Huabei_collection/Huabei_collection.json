@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "花呗收款",
+  "usingComponents": {
+    "grace-bottom-dialog": "/graceUI/components/graceBottomDialog",
+    "grace-dialog": "/graceUI/components/graceDialog"
+  }
+}

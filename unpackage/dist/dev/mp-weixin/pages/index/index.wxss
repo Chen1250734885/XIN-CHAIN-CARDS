@@ -1,0 +1,100 @@
+
+page {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 16rpx;
+}
+.kef_s {
+	position: absolute;
+	top: 380rpx;
+	left: 598rpx;
+	float: right;
+}
+.status_bar {
+	height: 25px;
+	width: 750rpx;
+}
+.content2 {
+	padding: 30rpx;
+	line-height: 50rpx;
+}
+.grace-dialog-buttons {
+	width: 700rpx;
+	line-height: 88rpx;
+	height: 88rpx;
+	display: block;
+	overflow: hidden;
+	text-align: center;
+	font-size: 26rpx;
+	color: #999999;
+}
+.kefu {
+	position: relative;
+	/* float: right; */
+	width: 660rpx;
+	background: rgba(255, 255, 255, 1);
+	margin-top: -35rpx;
+	margin-bottom: 13rpx;
+	height: 100rpx;
+	border-radius: 50rpx;
+	margin-left: 45rpx;
+	/* z-index: 9999; */
+}
+.hks {
+	margin-left: 5rpx;
+	font-size: 30rpx;
+	color: rgba(51, 51, 51, 1);
+}
+.swiper {
+	height: 400rpx;
+}
+swiper-item image {
+	width: 100%;
+	height: 400rpx;
+}
+.lianxi {
+	position: absolute;
+	top: 60rpx;
+	left: 25rpx;
+}
+.popup {
+	width: 500rpx;
+	height: 300rpx;
+	background-color: #FFFFFF;
+	border-radius: 20rpx;
+}
+.progress-box {
+	position: absolute;
+	border-radius: 50rpx !important;
+	margin-top: 182rpx;
+	left: 300rpx;
+	width: 227rpx;
+}
+.fenxians {
+	position: absolute;
+	top: 430rpx;
+	left: 139rpx;
+	width: 288rpx;
+	height: 60rpx;
+	background: linear-gradient(0deg, #FAFBEC, #FFEF94);
+	border-radius: 30rpx;
+	text-align: center;
+	line-height: 60rpx;
+	font-size: 25rpx;
+	color: #E93441;
+}
+.guanbisa {
+	position: absolute;
+	top: 507rpx;
+	left: 139rpx;
+	width: 288rpx;
+	height: 60rpx;
+	border: 2rpx solid #FFFFFF;
+	border-radius: 30rpx;
+	text-align: center;
+	line-height: 60rpx;
+	font-size: 26rpx;
+	color: #FFFFFF;
+}
+

@@ -1,0 +1,32 @@
+
+.yuans{
+	width: 750rpx;
+	height: 100rpx;
+	background-color: #FFFFFF;
+	line-height: 100rpx;
+}
+.xinmi{
+	margin-top: 1rpx;
+	width: 750rpx;
+	height: 100rpx;
+	background-color: #FFFFFF;
+	line-height: 100rpx;
+}
+.qrxin{
+	margin-top: 1rpx;
+	width: 750rpx;
+	height: 100rpx;
+	background-color: #FFFFFF;
+	line-height: 100rpx;
+}
+.annqr{
+	width: 500rpx;
+	height: 90rpx;
+	background-color: rgba(79, 159, 254, 1);
+	border-radius: 6rpx;
+	margin-top: 179rpx;
+	margin-left: 125rpx;
+	line-height: 90rpx;
+	text-align: center;
+}
+

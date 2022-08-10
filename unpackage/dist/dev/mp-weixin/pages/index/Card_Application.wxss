@@ -1,0 +1,30 @@
+
+page{
+	background-color: RGBA(247, 247, 247, 1);
+}
+.bankas{
+	width: 750rpx;
+	height: 360rpx;
+	background-color: #FFFFFF;
+}
+.remenyi{
+	width: 750rpx;
+	height: 40rpx;
+	background-color: #FFFFFF;
+	margin-top: 10rpx;
+	font-size:24rpx;
+	color:rgba(51,51,51,1);
+	line-height:40rpx;
+}
+.yinhangs{
+	display: inline-block;
+}
+.mins_yin{
+	width: 186rpx;
+	height: 186rpx;
+	background-color: #FFFFFF;
+	margin-top: 1rpx;
+	margin-right: 1rpx;
+	display: inline-block;
+}
+

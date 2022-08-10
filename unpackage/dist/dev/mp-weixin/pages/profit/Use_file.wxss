@@ -1,0 +1,37 @@
+
+.kabm {
+	width: 750rpx;
+	height: 100rpx;
+	background-color: #FFFFFF;
+	line-height: 100rpx;
+}
+.shiydx {
+	width: 750rpx;
+	height: 100rpx;
+	background-color: #FFFFFF;
+	line-height: 100rpx;
+	margin-top: 1rpx;
+	margin-bottom: 18rpx;
+}
+.zhuanran {
+	width: 280rpx;
+	height: 70rpx;
+	background-color: #FFFFFF;
+	color: rgba(154, 154, 154, 1);
+	display: inline-block;
+	font-size: 32rpx;
+	line-height: 70rpx;
+	text-align: center;
+	margin-right: 100rpx;
+}
+.ruer {
+	width: 280rpx;
+	height: 70rpx;
+	background-color: RGBA(3, 124, 234, 1);
+	color: #FFFFFF;
+	font-size: 32rpx;
+	line-height: 70rpx;
+	text-align: center;
+	display: inline-block;
+}
+

@@ -271,7 +271,8 @@
 		{
 			"path": "pages/forget_password/forget_password",
 			"style": {
-				"navigationBarTitleText": "忘记密码"
+				"navigationBarTitleText": "忘记密码",
+				"navigationBarBackgroundColor": "#1678FF"
 			}
 		},
 		{
@@ -753,12 +754,13 @@
 				"selectedIconPath": "static/tabbar/shouye.png",
 				"text": "首页"
 			},
-			{
-				"pagePath": "pages/classify/classify",
-				"iconPath": "static/tabbar/ccf94aabcb319c3d8716a8a20eb48ef6.png",
-				"selectedIconPath": "static/tabbar/zhekos.png",
-				"text": "折扣区"
-			},
+			// 折扣区无接口暂时先注释
+			// {
+			// 	"pagePath": "pages/classify/classify",
+			// 	"iconPath": "static/tabbar/ccf94aabcb319c3d8716a8a20eb48ef6.png",
+			// 	"selectedIconPath": "static/tabbar/zhekos.png",
+			// 	"text": "折扣区"
+			// },
 			{
 				"pagePath": "pages/profit/profit",
 				"iconPath": "static/tabbar/005420618619cc9a2c17b437d9cd27ac.png",

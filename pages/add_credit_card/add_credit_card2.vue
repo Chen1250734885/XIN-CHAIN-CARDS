@@ -26,7 +26,8 @@
 			<view style="margin-top: 35rpx;">
 				<view class="grace-rows grace-flex-vcenter" style="width:750rpx;height:100rpx;background:rgba(255,255,255,1);">
 					<text style="margin-left: 35rpx; font-size:30rpx;font-weight:400;color:rgba(51,51,51,1);">信用卡安全码：</text>
-					<input type="number" v-model="cvv2" placeholder="请填写三位数字安全码" style="margin-left: 10rpx;width: 450rpx;font-size: 24rpx;"/>
+					<input type="number" v-model="cvv2" maxlength="3" placeholder="请填写三位数字安全码" style="margin-left: 10rpx;width: 450rpx;font-size: 24rpx; "/>
+					<!-- maxlength="3" 设置 输入数字长度为3 -->
 				</view>
 			</view>
 			<view>
@@ -40,6 +41,7 @@
 import gracePage from "../../graceUI/components/gracePage.vue";
 export default {
 	data() {
+		// const cvv2 = /^\d{3,}$/
 		return {
 			bc_bank_id:'',
 			bc_bank_number:'',

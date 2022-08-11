@@ -78,19 +78,7 @@
 				<image src="../../static/jiantou.png" style="width: 100%;height: 100%;margin-left: 170rpx;" mode=""></image>
 			</view>
 		</view>
-		<!-- 客服 -->
-		<view class="xianshi" style="margin-top: 2rpx;" @tap="lxkf">
-			<view class="tubiao">
-				<image src="../../static2/kef.png" style="width: 100%;height: 100%;" mode=""></image>
-			</view>
-			<view class="huodo">
-				<text style="font-size:30rpx;font-family:PingFang SC;color:#565656;">联系客服</text>
-			</view>
-			<view class="tbs" >
-				<image src="../../static/jiantou.png" style="width: 100%;height: 100%;margin-left: 170rpx;" mode=""></image>
-			</view>
-		</view>
-		<!-- 修改密码 -->
+		<!-- 修改密码 --> 
 		<view class="xianshi" style="margin-top: 2rpx;" @tap="moilrd">
 			<view class="tubiao">
 				<image src="../../static/shezhi.png" style="width: 100%;height: 100%;" mode=""></image>
@@ -129,6 +117,18 @@
 			</view>
 			
 		</view>
+		<!-- 客服 -->
+		<view class="xianshi" style="margin-top: 2rpx;" @tap="lxkf">
+			<view class="tubiao">
+				<image src="../../static2/kef.png" style="width: 100%;height: 100%;" mode=""></image>
+			</view>
+			<view class="huodo">
+				<text style="font-size:30rpx;font-family:PingFang SC;color:#565656;">联系客服</text>
+			</view>
+			<view class="tbs" >
+				<image src="../../static/jiantou.png" style="width: 100%;height: 100%;margin-left: 170rpx;" mode=""></image>
+			</view>
+		</view> 
 		<!-- 关于 -->
 		<view class="xianshi" style="margin-top: 2rpx;" @tap="about">
 			<view class="tubiao">
@@ -148,10 +148,10 @@
 			<button type="primary" @tap="outlogin" class="grace-button" style="width:702rpx;height:80rpx;background:#1678FF;border-radius:10rpx;font-weight:bold;color:rgba(255,255,255,1);font-size:32rpx;">退出登录</button>
 		</view>
 		<!-- 客服帮助 -->
-		<view class="kef_s" @tap="qiaozhuandaokehu">
+		<!-- <view class="kef_s" @tap="qiaozhuandaokehu">
 			<image :style="'left:'+moveX+'px;top:'+moveY+'px'" @touchstart="drag_start" @touchmove.prevent="drag_hmove" src="../../static2/kefs.png"
 			 mode="" style="width: 152rpx;height:79rpx;transform: translate(4rpx,4rpx);"></image>
-		</view>
+		</view> -->
 	</view>
 </template>
 
@@ -234,11 +234,12 @@
 				this.moveX = tag[0].clientX - this.start[0];
 				this.moveY = tag[0].clientY - this.start[1];
 			},
-			qiaozhuandaokehu() {
-				uni.navigateTo({
-					url: '/pages/Last_page/Custome_services'
-				})
-			},
+			// 客服帮助--已经去掉了
+			// qiaozhuandaokehu() {
+			// 	uni.navigateTo({
+			// 		url: '/pages/Last_page/Custome_services'
+			// 	})
+			// },
 			outlogin(){
 				uni.clearStorageSync()
 				this.Goto('/pages/login/login');
@@ -273,8 +274,8 @@
 			},
 			// 联系客服
 			lxkf(){
-				// this.Goto('/pages/Last_page/Custome_service');
-				this.Goto('/pages/Last_page/Custome_services');
+				this.Goto('/pages/Last_page/Custome_service');
+				// this.Goto('/pages/Last_page/Custome_services');
 			},
 			// 修改密码
 			moilrd(){

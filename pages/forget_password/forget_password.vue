@@ -210,6 +210,7 @@
 		  	background: rgba(255, 255, 255, 1);
 		  	border-radius: 10px;
 		  	margin: 0 24rpx;
+			/* margin: 0 30rpx; */
 		  	margin-bottom: 10rpx;
 		  }
 		  

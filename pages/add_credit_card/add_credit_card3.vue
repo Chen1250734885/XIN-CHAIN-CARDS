@@ -107,7 +107,7 @@
             type="number"
             v-model="bc_mobile"
             placeholder="请输入银行预留手机号码"
-            style="margin-left: 30rpx; width: 500rpx; font-size: 24rpx"
+            style="margin-left: 60rpx; width: 500rpx; font-size: 24rpx"
           />
         </view>
         <view

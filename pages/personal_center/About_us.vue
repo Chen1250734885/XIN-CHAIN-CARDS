@@ -11,8 +11,8 @@
 		</view>
 		
 		<view style="margin-top: 612rpx;text-align: center;">
-			<view style="font-size: 24rpx;color: rgba(153, 153, 153, 1);">四川欧迈卡电子科技有限公司版权所有</view>
-			<view style="font-size: 24rpx;color: rgba(153, 153, 153, 1);">copyright © 2018 Yuanchuang</view>
+			<view style="font-size: 24rpx;color: rgba(153, 153, 153, 1);">西安胜柯南信息科技有限公司</view>
+			<view style="font-size: 24rpx;color: rgba(153, 153, 153, 1);">copyright © 2022 Yuanchuang</view>
 		</view>
 		
 	</view>
@@ -33,7 +33,7 @@
 				var vm = this
 				console.log(1211);
 				uni.navigateTo({
-					url:'../souxin_view/souxin_view?url=https://m.xliank.com/api/share/using_help'
+					url:'../souxin_view/souxin_view?url=https://yihuanpay.com/api/share/using_help'
 				})
 				// vm.Goto('https://m.xliank.com/api/share/using_help')
 				// vm.req.get(

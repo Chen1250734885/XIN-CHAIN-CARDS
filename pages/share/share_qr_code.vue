@@ -156,7 +156,7 @@
 							const dx = bgObj.width * 0.5;
 							const fontSize = bgObj.width * 0.04;
 							const lineHeight = bgObj.height * 0.5;
-							//可直接return数组，也可以return一个promise对象, 但最终resolve一个数组, 这样就可以方便实现后台可控绘制海报
+	//可直接return数组，也可以return一个promise对象, 但最终resolve一个数组, 这样就可以方便实现后台可控绘制海报
 							return new Promise((rs, rj) => {
 								rs([{
 										type: 'text',
@@ -168,10 +168,17 @@
 										textBaseline: 'middle',
 										infoCallBack(textLength) {
 											return {
+												
 												// dx: bgObj.width * 0.44,
 												// dy: bgObj.width * 0.98
-												dx: screenWidth - 207,
-												dy: screenHeight - 180
+												
+												// 下面的dx和dy数据适配iPhone6/7/8系列
+												// dx: screenWidth - 207,
+												// dy: screenHeight - 180
+												
+												// 下面的dx和dy数据适配iPhoneX系列及其以上
+												dx: bgObj.width * 0.44,
+												dy: bgObj.width * 1.45
 											}
 										}
 									},
@@ -180,9 +187,14 @@
 										text: text,
 										size: bgObj.width * 0.3,
 										backgroundColor: 'rgba(255,255,255,255)',
-										dx: screenWidth - 240,
-										// dy:  bgObj.width * 1.3015,
-										dy: screenHeight - 310
+										
+										// 下面的dx和dy数据适配iPhone6/7/8系列
+										// dx: screenWidth - 245,
+										// dy: screenHeight - 310,
+										
+										// 下面的dx和dy数据适配iPhoneX系列及其以上
+										dx:	 bgObj.width * 0.345,
+										dy:  bgObj.width * 1.09
 									}
 								]);
 							})

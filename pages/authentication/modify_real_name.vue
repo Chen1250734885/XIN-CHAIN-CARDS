@@ -5,31 +5,41 @@
 
 			<view class="grace-flex-center" style="width: 750rpx;margin-top: 40rpx;">
 				<view @tap="getIDCard()">
-					<image :src=" id_card_img.length > 0  || card_img_id !== ''? id_card_img : '../../static/shenfenzheng.png'" style=" width: 330rpx;height: 210rpx;"></image>
+					<image
+						:src=" id_card_img.length > 0  || card_img_id !== ''? id_card_img : '../../static/shenfenzheng.png'"
+						style=" width: 330rpx;height: 210rpx;"></image>
 				</view>
 				<view style="margin-left: 41rpx;" @tap="getIDback">
-					<image :src="id_back_img.length > 0 ? id_back_img : '../../static/shenfenzhengs.png'" style=" width: 330rpx;height: 210rpx;"></image>
+					<image :src="id_back_img.length > 0 ? id_back_img : '../../static/shenfenzhengs.png'"
+						style=" width: 330rpx;height: 210rpx;"></image>
 				</view>
 			</view>
 
 			<view class="grace-rows grace-flex-center" style="margin-top: 25rpx;">
 				<image src="../../static/xiangji.png" style="width: 40rpx;height: 40rpx;"></image>
-				<text style="margin-left: 20rpx; font-size:23rpx;font-weight:400;color:rgba(51,51,51,1);">{{ xiangjishuoming }}</text>
+				<text
+					style="margin-left: 20rpx; font-size:23rpx;font-weight:400;color:rgba(51,51,51,1);">{{ xiangjishuoming }}</text>
 			</view>
 
 			<view style="margin-top: 35rpx;">
-				<view class="grace-rows grace-flex-vcenter" style="width:750rpx;height:100rpx;background:rgba(255,255,255,1);">
-					<text style="margin-left: 35rpx; font-size:30rpx;font-weight:400;color:rgba(51,51,51,1);">真实姓名：</text>
+				<view class="grace-rows grace-flex-vcenter"
+					style="width:750rpx;height:100rpx;background:rgba(255,255,255,1);">
+					<text
+						style="margin-left: 35rpx; font-size:30rpx;font-weight:400;color:rgba(51,51,51,1);">真实姓名：</text>
 					<input placeholder="请输入您的真实姓名" v-model="user_name" @input="name" style="margin-left: 60rpx;" />
 				</view>
 
-				<view class="grace-rows grace-flex-vcenter" style="margin-top: 2rpx; width:750rpx;height:100rpx;background:rgba(255,255,255,1);">
-					<text style="margin-left: 35rpx; font-size:30rpx;font-weight:400;color:rgba(51,51,51,1);">身份证号：</text>
+				<view class="grace-rows grace-flex-vcenter"
+					style="margin-top: 2rpx; width:750rpx;height:100rpx;background:rgba(255,255,255,1);">
+					<text
+						style="margin-left: 35rpx; font-size:30rpx;font-weight:400;color:rgba(51,51,51,1);">身份证号：</text>
 					<input placeholder="请输入您的真实姓名" v-model="user_id" @input="identis" style="margin-left: 60rpx;" />
 				</view>
 			</view>
 			<view>
-				<view @tap="submit" style="margin-top: 70rpx; width:500rpx;height:90rpx;background:#1678FF;box-shadow:0px 2rpx 5rpx 0px rgba(67,67,67,0.3);border-radius:20rpx;font-size:32rpx;font-weight:400;color:rgba(255,255,255,1);line-height: 90rpx;text-align: center;margin-left: 125rpx;">确认修改</view>
+				<view @tap="submit"
+					style="margin-top: 70rpx; width:500rpx;height:90rpx;background:#1678FF;box-shadow:0px 2rpx 5rpx 0px rgba(67,67,67,0.3);border-radius:20rpx;font-size:32rpx;font-weight:400;color:rgba(255,255,255,1);line-height: 90rpx;text-align: center;margin-left: 125rpx;">
+					确认修改</view>
 			</view>
 		</view>
 	</gracePage>
@@ -108,8 +118,8 @@
 					sourceType: ['album', 'camera'], //从相册选择
 					success: function(res) {
 						uni.showLoading({
-						    title: '加载中',
-							mask:true,
+							title: '加载中',
+							mask: true,
 						});
 						console.log('压缩前图片体积', res.tempFiles[0].size);
 						let path = res.tempFilePaths[0];
@@ -126,40 +136,41 @@
 									height: '40%' //缩略固定高
 								},
 								(result) => {
-										let imgPathUrl = result.target;
-										let imgPathSize = result.size;
-										console.log('压缩后的体积', imgPathSize);
-										uni.uploadFile({
-											url: 'https://m.xliank.com/api/Upload/user_upload_picture', //仅为示例，非真实的接口地址
-											filePath: imgPathUrl,
-											name: 'image',
-											formData: {
-												'file_type': 2,
-												'name': '0.png',
-											},
-											success: (uploadFileRes) => {
-												const res1 = (new Function("return " + uploadFileRes.data))();
-												console.log(res1);
-												if (res1.code == 200) {
-													uni.showToast({
-														title: res1.msg,
-														icon: 'none'
-													})
-													uni.hideLoading()
-													vm.id_card_img = res1.data.img_url_whole;
-													vm.card_img_id = res1.data.img_url;
-												} else {
-													uni.showToast({
-														title: res1.msg,
-														icon: 'none'
-													})
-												}
-										
+									let imgPathUrl = result.target;
+									let imgPathSize = result.size;
+									console.log('压缩后的体积', imgPathSize);
+									uni.uploadFile({
+										url: 'https://m.xliank.com/api/Upload/user_upload_picture', //仅为示例，非真实的接口地址
+										filePath: imgPathUrl,
+										name: 'image',
+										formData: {
+											'file_type': 2,
+											'name': '0.png',
+										},
+										success: (uploadFileRes) => {
+											const res1 = (new Function("return " +
+												uploadFileRes.data))();
+											console.log(res1);
+											if (res1.code == 200) {
+												uni.showToast({
+													title: res1.msg,
+													icon: 'none'
+												})
+												uni.hideLoading()
+												vm.id_card_img = res1.data.img_url_whole;
+												vm.card_img_id = res1.data.img_url;
+											} else {
+												uni.showToast({
+													title: res1.msg,
+													icon: 'none'
+												})
 											}
-										});
-									}
-								)
-						}else{
+
+										}
+									});
+								}
+							)
+						} else {
 							uni.uploadFile({
 								url: 'https://m.xliank.com/api/Upload/user_upload_picture', //仅为示例，非真实的接口地址
 								filePath: path,
@@ -185,11 +196,11 @@
 											icon: 'none'
 										})
 									}
-							
+
 								}
 							});
 						}
-						
+
 					}
 				});
 				// #endif
@@ -273,13 +284,13 @@
 									uni.hideLoading()
 									vm.id_back_img = res1.data.img_url_whole;
 									vm.back_img_id = res1.data.img_url;
-								}else{
+								} else {
 									uni.showToast({
 										title: res1.msg,
 										icon: 'none'
 									})
 								}
-								
+
 							}
 						});
 					}
@@ -318,7 +329,7 @@
 									uni.hideLoading()
 									vm.id_back_img = res1.data.img_url_whole;
 									vm.back_img_id = res1.data.img_url;
-								}else{
+								} else {
 									uni.showToast({
 										title: res1.msg,
 										icon: 'none'

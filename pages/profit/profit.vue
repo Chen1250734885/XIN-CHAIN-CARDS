@@ -8,102 +8,140 @@
 				<view style="z-index: 99;margin:0 auto;">
 					<!-- 没有收益时显示 -->
 					<view v-if="level_name!=='免费用户'">
-						<view style="font-size:36rpx;font-weight:bold;color:rgba(255,255,255,1);margin-top: -500rpx;">收益</view>
-						<view style="font-size:30rpx;color:rgba(255,255,255,1);margin-top: 30rpx;margin-left: 8rpx;">余额</view>
+						<view style="font-size:36rpx;font-weight:bold;color:rgba(255,255,255,1);margin-top: -500rpx;">收益
+						</view>
+						<view style="font-size:30rpx;color:rgba(255,255,255,1);margin-top: 30rpx;margin-left: 8rpx;">余额
+						</view>
 					</view>
 					<!-- 有收益时显示 -->
 					<view v-else>
-						<view style="font-size:36rpx;font-weight:bold;color:rgba(255,255,255,1);margin-top: -500rpx;margin-left: 30rpx;">收益</view>
+						<view
+							style="font-size:36rpx;font-weight:bold;color:rgba(255,255,255,1);margin-top: -500rpx;margin-left: 30rpx;">
+							收益</view>
 						<view style="margin-left: -10rpx;margin-top: 12rpx;">
-							<image src="../../static2/tanhao.png" mode="" style="width: 32rpx;height: 32rpx;margin-top: 10rpx;transform: translateY(5rpx);"></image>
+							<image src="../../static2/tanhao.png" mode=""
+								style="width: 32rpx;height: 32rpx;margin-top: 10rpx;transform: translateY(5rpx);">
+							</image>
 							<text style="font-size:30rpx;color:rgba(255,255,255,1);margin-left: 10rpx;">未得收益</text>
 
 						</view>
 					</view>
 				</view>
 				<!-- 余额 -->
-				<view style="font-size:70rpx;font-weight:bold;color:rgba(255,255,255,1);z-index: 99;margin: -339rpx auto;">{{jine}}</view>
+				<view
+					style="font-size:70rpx;font-weight:bold;color:rgba(255,255,255,1);z-index: 99;margin: -339rpx auto;">
+					{{jine}}</view>
 				<!-- 是否是vip -->
 				<view class="tixiab" @tap="tixian(is_vip)">{{is_vip!==0? '提现':'升级'}}</view>
 				<!-- 明细、消费过、新增 -->
 				<view class="mxz grace-rows">
 					<view class="grace-columns" @tap="minxi">
 						<view class="daijihuo">
-							<view style="font-size:26rpx;font-family:PingFang SC;font-weight:400;color:rgba(52,52,52,1);text-align: center;margin-top: 28rpx;">{{activateds}}</view>
-							<view style="font-size:32rpx;font-family:PingFang SC;font-weight:400;color:rgba(52,52,52,1);text-align: center;">{{activated}}</view>
+							<view
+								style="font-size:26rpx;font-family:PingFang SC;font-weight:400;color:rgba(52,52,52,1);text-align: center;margin-top: 28rpx;">
+								{{activateds}}</view>
+							<view
+								style="font-size:32rpx;font-family:PingFang SC;font-weight:400;color:rgba(52,52,52,1);text-align: center;">
+								{{activated}}</view>
 						</view>
 					</view>
 					<!-- 消费过 -->
 					<view class="grace-columns">
 						<view class="xiaofeiguo" @tap="tuig">
-							<view style="font-size:26rpx;font-family:PingFang SC;font-weight:400;color:rgba(52,52,52,1);text-align: center;margin-top: 28rpx;">{{effectives}}</view>
-							<view style="font-size:32rpx;font-family:PingFang SC;font-weight:400;color:rgba(52,52,52,1);text-align: center;">{{effective}}</view>
+							<view
+								style="font-size:26rpx;font-family:PingFang SC;font-weight:400;color:rgba(52,52,52,1);text-align: center;margin-top: 28rpx;">
+								{{effectives}}</view>
+							<view
+								style="font-size:32rpx;font-family:PingFang SC;font-weight:400;color:rgba(52,52,52,1);text-align: center;">
+								{{effective}}人</view>
 						</view>
 					</view>
 					<!-- 新增 -->
 					<view class="grace-columns" @tap="xinzs">
 						<view class="xinzeng">
-							<view style="font-size:26rpx;font-family:PingFang SC;font-weight:400;color:rgba(52,52,52,1);text-align: center;margin-top: 28rpx;">{{todays}}</view>
-							<view style="font-size:32rpx;font-family:PingFang SC;font-weight:400;color:rgba(52,52,52,1);text-align: center;">{{today}}</view>
+							<view
+								style="font-size:26rpx;font-family:PingFang SC;font-weight:400;color:rgba(52,52,52,1);text-align: center;margin-top: 28rpx;">
+								{{todays}}</view>
+							<view
+								style="font-size:32rpx;font-family:PingFang SC;font-weight:400;color:rgba(52,52,52,1);text-align: center;">
+								{{today}}</view>
 						</view>
 					</view>
 				</view>
 				<!-- 等级 -->
 				<view class="dengji">
-					<view style="display: flex;justify-content: flex-end;margin-top: 12rpx;">
-						<text style="font-size: 22rpx;color: rgba(51, 51, 51, 1);">等衔：</text>
-						<text style="font-size: 28rpx;font-weight:bold;color:rgba(255,96,0,1);margin-right: 41rpx;">{{level_name}}</text>
+					<view style="display: flex;justify-content: flex-start;margin-top: 32rpx;margin-left: 60rpx;">
+						<text style="font-size: 60rpx;color: rgba(51, 51, 51, 1);">等衔：</text>
+						<text
+							style="font-size: 48rpx;font-weight:bold;color:rgba(255,96,0,1);margin-top: 12rpx;margin-right: 41rpx;">{{level_name}}</text>
 					</view>
-					<view>
-						<image v-if="level_name!=='免费用户'" src="../../static2/vipyishnag.png" mode="" style="width: 680rpx;height: 160rpx;margin-left: 10rpx;"></image>
-						<image v-else src="../../static2/miafei.png" mode="" style="width: 680rpx;height: 160rpx;margin-left: 10rpx;"></image>
-						
-					</view>
+					<!-- 隐藏 -->
+<!-- 					<view>
+						<image v-if="level_name!=='免费用户'" src="../../static2/vipyishnag.png" mode=""
+							style="width: 680rpx;height: 160rpx;margin-left: 10rpx;"></image>
+						<image v-else src="../../static2/miafei.png" mode=""
+							style="width: 680rpx;height: 160rpx;margin-left: 10rpx;"></image>
+					</view> -->
 					<view style="display: flex;justify-content:space-between;">
-						<view style="margin-top: -20rpx;margin-left: 89rpx;">
-							<text style="font-size: 22rpx;color: rgba(51, 51, 51, 1);">直推用户</text>
-							<text style="font-size: 22rpx;color:rgba(255,96,0,1);">{{effective}}</text> 
+						<view style="margin-top: 40rpx;margin-left: 60rpx;">
+							<text style="font-size: 32rpx;color: rgba(51, 51, 51, 1);">直推用户</text>
+							<text style="font-size: 32rpx;color:rgba(255,96,0,1);">{{effective}}</text>人</text>
+							<text style="font-size: 32rpx;color: rgba(51, 51, 51, 1);">人</text>
 							<!-- effective.substr(0,effective.length -1) -->
-							<text v-if="level_name!=='免费用户'" style="font-size: 22rpx;color: rgba(51, 51, 51, 1);">人(VIP<text style="font-size: 22rpx;color:rgba(255,96,0,1);">{{is_vips}}</text>人)</text>
-							<text v-else style="font-size: 22rpx;color: rgba(51, 51, 51, 1);">人(使用<text style="font-size: 22rpx;color:rgba(255,96,0,1);">{{is_vips}}</text>人)</text>
+							<text v-if="level_name!=='免费用户'"
+								style="font-size: 22rpx;color: rgba(51, 51, 51, 1);">(VIP<text
+									style="font-size: 22rpx;color:rgba(255,96,0,1);">{{is_vips}}</text>人)</text>
+							<text v-else style="font-size: 32rpx;color: rgba(51, 51, 51, 1);">人(使用<text>
+									style="font-size: 32rpx;color:rgba(255,96,0,1);">{{is_vips}}</text>人)</text>
 						</view>
-						<view style="margin-top: -20rpx;margin-right: 90rpx;">
-							<text style="font-size: 22rpx;color: rgba(51, 51, 51, 1);">一刷通<text style="font-size: 22rpx;color:rgba(255,96,0,1);">{{card_num}}</text>张</text>
+						<view style="margin-top: 40rpx;margin-right: 100rpx;">
+							<text style="font-size: 32rpx;color: rgba(51, 51, 51, 1);">一刷通<text
+									style="font-size: 32rpx;color:rgba(255,96,0,1);">{{card_num}}</text>张</text>
 						</view>
 					</view>
 				</view>
 				<view v-show="level_name!=='免费用户'">
-				<!-- 未继续使用 -->
-				<view class="wjxsy" @tap="jxshiy">
-					<view style="width: 10rpx;height: 100rpx;background-color: rgba(46, 157, 7, 1);display: inline-block;float: left;"></view>
-					<text class="zhihao">未继续使用</text>
-					<image src="../../static2/jianto.png" mode="" class="jiantos"></image>
-				</view>
-				<!-- 分润 -->
-				<view class="wjxsy_2" @tap="fenrun">
-					<view style="width: 10rpx;height: 100rpx;background-color: rgba(227, 181, 20, 1);display: inline-block;float: left;"></view>
-					<text class="zhihao">分润收益明细</text>
-					<image src="../../static2/jianto.png" mode="" class="jiantos"></image>
-				</view>
-				<!-- 佣金 -->
-				<view class="wjxsy_2" @tap="tuij">
-					<view style="width: 10rpx;height: 100rpx;background-color: rgba(227, 64, 20, 1);display: inline-block;float: left;"></view>
-					<text class="zhihao">推荐佣金</text>
-					<image src="../../static2/jianto.png" mode="" class="jiantos"></image>
-				</view>
+					<!-- 未继续使用 -->
+					<view class="wjxsy" @tap="jxshiy">
+						<view
+							style="width: 10rpx;height: 100rpx;background-color: rgba(46, 157, 7, 1);display: inline-block;float: left;">
+						</view>
+						<text class="zhihao">未继续使用</text>
+						<image src="../../static2/jianto.png" mode="" class="jiantos"></image>
+					</view>
+					<!-- 分润 -->
+					<view class="wjxsy_2" @tap="fenrun">
+						<view
+							style="width: 10rpx;height: 100rpx;background-color: rgba(227, 181, 20, 1);display: inline-block;float: left;">
+						</view>
+						<text class="zhihao">分润收益明细</text>
+						<image src="../../static2/jianto.png" mode="" class="jiantos"></image>
+					</view>
+					<!-- 佣金 -->
+					<view class="wjxsy_2" @tap="tuij">
+						<view
+							style="width: 10rpx;height: 100rpx;background-color: rgba(227, 64, 20, 1);display: inline-block;float: left;">
+						</view>
+						<text class="zhihao">推荐佣金</text>
+						<image src="../../static2/jianto.png" mode="" class="jiantos"></image>
+					</view>
 				</view>
 				<!-- 一刷通 -->
 				<view v-show="level_name=='免费用户'" style="margin-top: 10rpx;margin-bottom: 110rpx;" @tap="mianfyh">
 					<image src="../../static2/bannars.png" mode="" style="width: 750rpx;height: 300rpx;"></image>
 				</view>
-				<scroll-view v-show="level_name!=='免费用户'"  class="grace-scroll-x" scroll-x="true" scroll-left="120" scroll-with-animation="true">
-					<view v-for="(item,index) in card_data" :key="index" style="display: inline-block;margin-bottom: 35rpx;">
-						<image :src="item.cc_img_url" mode="" style="width: 524rpx;height: 270rpx;margin: 30rpx 43rpx;"></image>
-				
-				<view class="covse" v-show="item.cc_id" v-if="item.cc_state==3" >
-					<text style="font-size: 80rpx;color: #FFFFFF;line-height: 270rpx;" @tap="chehui">撤回</text>
-				</view>		
-						
+				<scroll-view v-show="level_name!=='免费用户'" class="grace-scroll-x" scroll-x="true" scroll-left="120"
+					scroll-with-animation="true" style="text-align: center;">
+					<!-- 后端返回的图片位置居中显示 -->
+					<view v-for="(item,index) in card_data" :key="index"
+						style="display: inline-block;margin-bottom: 35rpx;">
+						<image :src="item.cc_img_url" mode="" style="width: 524rpx;height: 270rpx;margin: 30rpx 43rpx;">
+						</image>
+
+						<view class="covse" v-show="item.cc_id" v-if="item.cc_state==3">
+							<text style="font-size: 80rpx;color: #FFFFFF;line-height: 270rpx;" @tap="chehui">撤回</text>
+						</view>
+
 						<view class="bhan" v-show="item.cc_state!==2" v-else>
 							<view class="bianhao">{{'NO.'+item.cc_encoding}}</view>
 							<view class="bianx" v-show="item.cc_state!==0">
@@ -114,7 +152,7 @@
 					</view>
 				</scroll-view>
 			</view>
-			
+
 			<!-- 确认变现弹框 -->
 			<uni-popup ref="popup" type="center" style="z-index: 9999;">
 				<view class="tabk">
@@ -129,10 +167,11 @@
 				</view>
 			</uni-popup>
 			<!-- 客服帮助 -->
-			<view class="kef_s" @tap="qiaozhuandaokehu">
-				<image :style="'left:'+moveX+'px;top:'+moveY+'px'" @touchstart="drag_start" @touchmove.prevent="drag_hmove" src="../../static2/kefs.png"
-				 mode="" style="width: 152rpx;height:79rpx;transform: translate(4rpx,4rpx);"></image>
-			</view>
+			<!-- 			<view class="kef_s" @tap="qiaozhuandaokehu">
+				<image :style="'left:'+moveX+'px;top:'+moveY+'px'" @touchstart="drag_start"
+					@touchmove.prevent="drag_hmove" src="../../static2/kefs.png" mode=""
+					style="width: 152rpx;height:79rpx;transform: translate(4rpx,4rpx);"></image>
+			</view> -->
 		</view>
 	</gracePage>
 
@@ -141,7 +180,9 @@
 <script>
 	import gracePage from "../../graceUI/components/gracePage.vue";
 	import dnIcon from "../../components/dn-icon_1.2/component/dn-icon/dn-icon.vue";
-	import {myMixins} from "../../components/myMixins/myMixins.js"
+	import {
+		myMixins
+	} from "../../components/myMixins/myMixins.js"
 	export default {
 		mixins: [myMixins],
 		data() {
@@ -158,8 +199,8 @@
 				card_data: [],
 				level_name: '', //等级
 				performance_num_str: '', //绩效
-				is_vips: '',//VIP人数
-				card_num: '',//一刷通数量
+				is_vips: '', //VIP人数
+				card_num: '', //一刷通数量
 				sell_money: '',
 				start: [0, 0],
 				moveY: 0,
@@ -207,7 +248,7 @@
 				})
 			},
 			// 获取页面数据
-			loadData(){
+			loadData() {
 				var vm = this;
 				vm.req.post(
 					vm.lochost + '/index/index?method=user_earnings', {}, {},
@@ -237,7 +278,7 @@
 							card_data.push(card_list[i])
 						}
 						vm.card_data = card_data
-				
+
 					}
 				);
 			},
@@ -272,13 +313,13 @@
 			// 提现或升级
 			tixian(vip) {
 				if (vip !== 0) {
-					this.Goto('/pages/profit/cash_withdrawal?jine='+this.jine)
+					this.Goto('/pages/profit/cash_withdrawal?jine=' + this.jine)
 				} else {
 					this.Goto('/pages/rise_vip/rise_vip')
 				}
 			},
 			// 免费用户banner点击跳转升级页
-			mianfyh(){
+			mianfyh() {
 				this.Goto('/pages/rise_vip/rise_vip')
 			},
 			// 变现按钮
@@ -298,13 +339,13 @@
 						}
 					}
 				)
-			
+
 			},
 			// 变现确认按钮
 			qr() {
 				var cc_id = this.cc_id;
 				console.log(cc_id);
-			
+
 				var vm = this
 				// vm.is_cover = true
 				vm.$refs.popup.close()
@@ -412,6 +453,7 @@
 		z-index: 9999;
 		float: right;
 	}
+
 	.tixiab {
 		width: 160rpx;
 		height: 50rpx;
@@ -438,7 +480,7 @@
 	.daijihuo {
 		width: 180rpx;
 		height: 130rpx;
-		background: linear-gradient(54deg, rgba(255, 186, 0, 1) 0%, rgba(255, 252, 0, 1) 100%);
+		background: linear-gradient(54deg, rgba(0, 170, 0, 1.0) 0%, rgba(170, 255, 255, 1.0) 100%);
 		border-radius: 10rpx;
 		margin-top: 35rpx;
 		margin-left: 41rpx;
@@ -447,7 +489,7 @@
 	.xiaofeiguo {
 		width: 180rpx;
 		height: 130rpx;
-		background: linear-gradient(54deg, rgba(0, 144, 255, 1) 0%, rgba(0, 210, 255, 1) 100%);
+		background: linear-gradient(54deg, rgba(255, 85, 127, 1.0) 0%, rgba(170, 0, 0, 1.0) 100%);
 		border-radius: 10rpx;
 		margin-top: 35rpx;
 		margin-left: 41rpx;
@@ -456,7 +498,7 @@
 	.xinzeng {
 		width: 180rpx;
 		height: 130rpx;
-		background: linear-gradient(54deg, rgba(0, 228, 220, 1) 0%, rgba(0, 240, 130, 1) 100%);
+		background: linear-gradient(54deg, rgba(255, 255, 0, 1.0) 0%, rgba(255, 170, 0, 1.0) 100%);
 		border-radius: 10rpx;
 		margin-top: 35rpx;
 		margin-left: 41rpx;
@@ -667,33 +709,34 @@
 		color: #FFFFFF;
 		z-index: 999;
 	}
+
 	.tabk {
 		width: 540rpx;
 		height: 340rpx;
 		background-color: #FFFFFF;
 		border-radius: 10rpx;
-	
+
 	}
-	
+
 	.tabk_b {
 		font-size: 32rpx;
 		margin-left: 180rpx;
 		transform: translateY(40rpx);
 	}
-	
+
 	.tabk_x {
 		margin-top: 10rpx;
 		font-size: 32rpx;
 		margin-left: 120rpx;
 		transform: translateY(40rpx);
 	}
-	
+
 	.tabk_y {
 		font-size: 32rpx;
 		margin-left: 180rpx;
 		transform: translateY(40rpx);
 	}
-	
+
 	.tabk_k {
 		font-size: 22rpx;
 		margin-left: 120rpx;
@@ -701,13 +744,13 @@
 		color: rgba(154, 154, 154, 1);
 		margin-top: 21rpx;
 	}
-	
+
 	.bnts {
 		display: flex;
 		justify-content: space-between;
 		margin-top: 82rpx;
 	}
-	
+
 	.qr_s {
 		width: 270rpx;
 		height: 70rpx;
@@ -718,7 +761,7 @@
 		border-radius: 0 0 0 10rpx;
 		text-align: center;
 	}
-	
+
 	.qx_s {
 		width: 270rpx;
 		height: 70rpx;
@@ -729,6 +772,7 @@
 		border-radius: 0 0 10rpx 0;
 		text-align: center;
 	}
+
 	.covse {
 		/* position:absolute;left:0rpx;top:0rpx; */
 		margin-top: -269rpx;

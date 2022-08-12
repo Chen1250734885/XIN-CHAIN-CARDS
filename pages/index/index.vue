@@ -18,7 +18,7 @@
 			<!-- 顶部背景图 -->
 
 			<view class="lianxi" @tap="lianxi_tiao">
-				<image src="../../static2/contact_we.png" mode="" style="width: 100rpx;height: 100rpx;"></image>
+				<image src="../../static2/contact_we.png" mode="" style="width: 80rpx;height: 90rpx;"></image>
 			</view>
 			<!-- 客服轮播热线提醒 -->
 			<view class="grace-rows grace-flex-vcenter kefu">
@@ -79,7 +79,7 @@
 				</view>
 			</view> -->
 			<!-- 轮播图 -->
-			<view style="margin-top: 41rpx;margin-bottom: 16rpx;">
+			<view style="margin-top: 65rpx;margin-bottom: 16rpx;">
 				<swiper class="swiper" interval="3000" duration="1500" autoplay="ture" circular="ture">
 					<swiper-item v-for="(item , index) in swiperItems" :key="index" @tap="tourl(item.title)">
 						<image :src="item.img" mode=""></image>
@@ -657,8 +657,8 @@
 		/* float: right; */
 		width: 660rpx;
 		background: rgba(255, 255, 255, 1);
-		margin-top: -35rpx;
-		margin-bottom: 13rpx;
+		margin-top: 20rpx;
+		margin-bottom: 10rpx;
 		height: 100rpx;
 		border-radius: 50rpx;
 		margin-left: 45rpx;
@@ -682,8 +682,9 @@
 
 	.lianxi {
 		position: absolute;
-		top: 60rpx;
-		left: 25rpx;
+		top: 380rpx;
+		right: 25rpx;
+		/* background-color: orange; */
 	}
 
 	.popup {

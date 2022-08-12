@@ -52,11 +52,12 @@
       ></image>
     </view>
     <view class="huiyuan">
-      <image
+		<!-- 缺少素材，等后期添加 -->
+      <!-- <image
         src="../../static2/caidai.png"
         mode=""
         style="width: 100%; height: 100%"
-      ></image>
+      ></image> -->
     </view>
     <!-- 领取规则 -->
     <uni-popup ref="popup" type="center">

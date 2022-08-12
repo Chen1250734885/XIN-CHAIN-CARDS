@@ -68,7 +68,7 @@
 							<text v-else style="font-size: 22rpx;color: rgba(51, 51, 51, 1);">人(使用<text style="font-size: 22rpx;color:rgba(255,96,0,1);">{{is_vips}}</text>人)</text>
 						</view>
 						<view style="margin-top: -20rpx;margin-right: 90rpx;">
-							<text style="font-size: 22rpx;color: rgba(51, 51, 51, 1);">鑫链卡<text style="font-size: 22rpx;color:rgba(255,96,0,1);">{{card_num}}</text>张</text>
+							<text style="font-size: 22rpx;color: rgba(51, 51, 51, 1);">一刷通<text style="font-size: 22rpx;color:rgba(255,96,0,1);">{{card_num}}</text>张</text>
 						</view>
 					</view>
 				</view>
@@ -92,7 +92,7 @@
 					<image src="../../static2/jianto.png" mode="" class="jiantos"></image>
 				</view>
 				</view>
-				<!-- 鑫链卡 -->
+				<!-- 一刷通 -->
 				<view v-show="level_name=='免费用户'" style="margin-top: 10rpx;margin-bottom: 110rpx;" @tap="mianfyh">
 					<image src="../../static2/bannars.png" mode="" style="width: 750rpx;height: 300rpx;"></image>
 				</view>
@@ -118,7 +118,7 @@
 			<!-- 确认变现弹框 -->
 			<uni-popup ref="popup" type="center" style="z-index: 9999;">
 				<view class="tabk">
-					<view class="tabk_b">鑫琏卡变现</view>
+					<view class="tabk_b">一刷通变现</view>
 					<view class="tabk_x">确认将此卡交易变现</view>
 					<view class="tabk_y">折扣价{{sell_money}}元</view>
 					<view class="tabk_k">可在收益页面查看余额后提现</view>
@@ -159,7 +159,7 @@
 				level_name: '', //等级
 				performance_num_str: '', //绩效
 				is_vips: '',//VIP人数
-				card_num: '',//鑫链卡数量
+				card_num: '',//一刷通数量
 				sell_money: '',
 				start: [0, 0],
 				moveY: 0,
@@ -203,7 +203,7 @@
 			},
 			qiaozhuandaokehu() {
 				uni.navigateTo({
-					url: '/pages/Last_page/Custome_services'
+					url: '/pages/Last_page/Custome_service'
 				})
 			},
 			// 获取页面数据
@@ -265,7 +265,7 @@
 			tuij() {
 				this.Goto('/pages/profit/Xinka')
 			},
-			// 鑫链卡使用
+			// 一刷通使用
 			use_sy(coding, card_id) {
 				this.Goto('/pages/profit/Use_file?card_id=' + card_id + '&coding=' + coding)
 			},

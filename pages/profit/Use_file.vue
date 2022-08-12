@@ -1,5 +1,5 @@
 <template>
-	<!-- 鑫链卡使用 -->
+	<!-- 一刷通使用 -->
 	<view slot="gBody">
 		<!-- 卡编码 -->
 		<view class="kabm">

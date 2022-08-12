@@ -9,14 +9,14 @@
 			<image src="../../static2/erwei.png" mode="" style="width: 42rpx;height: 42rpx;display: inline-block;margin-left: 25rpx;transform: translateY(-10rpx);"></image>
 			<view style="display: inline-block;margin-left: 31rpx;line-height: 50rpx;">
 			<view style="font-size: 32rpx;">分享二维码</view>
-			<view style="font-size: 24rpx;color: rgba(241, 51, 51, 1);">分享二维码后请让客户关注鑫链卡微信公众号</view>
+			<view style="font-size: 24rpx;color: rgba(241, 51, 51, 1);">分享二维码后请让客户关注一刷通微信公众号</view>
 			</view>
 			<image src="../../static2/gengduo.png" mode="" style="width: 19rpx;height: 34rpx;margin-left: 125rpx;transform: translateY(-10rpx);"></image>
 		</view>
 		<!-- 分享公众号 -->
 		<!-- <view class="weimass" @tap="xianshi">
 			<image src="../../static2/wex.png" mode="" style="width: 42rpx;height: 42rpx;margin-left: 25rpx;margin-right: 31rpx;transform: translateY(10rpx);"></image>
-			<text style="font-size: 32rpx;">分享鑫琏卡微信公众号（<text style="font-size: 32rpx;color: rgba(252, 128, 128, 1);font-weight: bold;">客服</text>）</text>
+			<text style="font-size: 32rpx;">分享一刷通微信公众号（<text style="font-size: 32rpx;color: rgba(252, 128, 128, 1);font-weight: bold;">客服</text>）</text>
 			<image src="../../static2/gengduo.png" mode="" style="width: 19rpx;height: 34rpx;margin-left: 155rpx;"></image>
 		</view> -->
 		<graceBottomDialog :show="show3" v-on:closeDialog="closeDialog3">

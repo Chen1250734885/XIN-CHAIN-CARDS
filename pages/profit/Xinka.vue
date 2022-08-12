@@ -1,7 +1,7 @@
 <template>
 	<!-- 推荐佣金 -->
 	<view slot="gBody">
-		<!-- 鑫链卡记录按钮 -->
+		<!-- 一刷通记录按钮 -->
 			<view class="wqann" @tap="jilu">
 				<image :style="'left:'+moveX+'px;top:'+moveY+'px'" src="../../static2/xnkjinu.png" @touchstart="drag_start"
 				 @touchmove.prevent="drag_hmove" mode="aspectFit" style="width: 150rpx;height: 150rpx;"></image>
@@ -25,7 +25,7 @@
 		<!-- 确认变现弹框 -->
 		<uni-popup ref="popup" type="center" style="z-index: 9999;">
 			<view class="tabk">
-				<view class="tabk_b">鑫琏卡变现</view>
+				<view class="tabk_b">一刷通变现</view>
 				<view class="tabk_x">确认将此卡交易变现</view>
 				<view class="tabk_y">折扣价{{sell_money}}元</view>
 				<view class="tabk_k">可在收益页面查看余额后提现</view>
@@ -77,7 +77,7 @@
 			}
 		},
 		methods: {
-			// 鑫链卡记录按钮拖拽功能
+			// 一刷通记录按钮拖拽功能
 			drag_start(event) {
 				this.start[0] = event.touches[0].clientX - event.target.offsetLeft;
 				this.start[1] = event.touches[0].clientY - event.target.offsetTop;
@@ -163,7 +163,7 @@
 			qx() {
 				this.$refs.popup.close()
 			},
-			// 鑫链卡使用
+			// 一刷通使用
 			use_sy(coding, card_id) {
 				this.Goto('/pages/profit/Use_file?card_id=' + card_id + '&coding=' + coding)
 			},

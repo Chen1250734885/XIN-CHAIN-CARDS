@@ -46,7 +46,7 @@
 			<view>
 				<image src="../../static2/butoyi.png" v-if="is_xuanzhong" mode="" style="width: 40rpx;height: 40rpx;transform: translateY(10rpx);margin-left: 24rpx;" @tap="butoyis"></image>
 				<image src="../../static2/toyi.png" v-else mode="" style="width: 40rpx;height: 40rpx;transform: translateY(10rpx);margin-left: 24rpx;" @tap="toyis"></image>
-				<text style="font-size: 28rpx;color: #999999;margin-left: 15rpx;">同意鑫链卡注册协议</text>
+				<text style="font-size: 28rpx;color: #999999;margin-left: 15rpx;">同意一刷通注册协议</text>
 			
 			</view>
 			<!-- 注册按钮 -->
@@ -125,7 +125,7 @@
 				if (this.phoneno.length > 0 && this.yanzhengma.length > 0 && this.mima.length > 0) {
 					if(this.is_xuanzhong == true){
 						uni.showToast({
-							title: '请同意鑫链卡注册协议',
+							title: '请同意一刷通注册协议',
 							icon: "none"
 						});
 					}else{

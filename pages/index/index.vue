@@ -136,10 +136,10 @@
 
 			</uni-popup>
 			<!-- 客服服务 -->
-			<view class="kef_s" @tap="qiaozhuandaokehu">
+<!-- 			<view class="kef_s" @tap="qiaozhuandaokehu">
 				<image :style="'left:'+moveX+'px;top:'+moveY+'px'" @touchstart="drag_start" @touchmove.prevent="drag_hmove" src="../../static2/kefs.png"
 				 mode="" style="width: 152rpx;height:79rpx;transform: translate(4rpx,4rpx);"></image>
-			</view>
+			</view> -->
 			<!-- 抵扣券售卖弹框 -->
 			<graceBottomDialog :show="show3" v-on:closeDialog="closeDialog3" style="">
 				<scroll-view scroll-y slot="content" style="background:rgba(255,234,169,1);z-index: 9;">

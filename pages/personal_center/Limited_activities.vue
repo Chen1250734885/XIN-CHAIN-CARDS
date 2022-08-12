@@ -6,7 +6,7 @@
     <view class="titlequ">限时领取</view>
     <view class="title_2"></view>
     <view class="zhuancx">VIP专享</view>
-    <view class="zhuancx_2">鑫琏卡加速包</view>
+    <view class="zhuancx_2">一刷通加速包</view>
     <view class="zhuancx_3">年营利5倍以上静态收益</view>
     <view class="zhuancx_3">70天可获全额度变现卡一张</view>
     <view class="liqujd">
@@ -41,7 +41,7 @@
           margin-left: 34rpx;
           margin-top: -45rpx;
         "
-        >*进度到达100%后获得一张鑫琏卡</view
+        >*进度到达100%后获得一张一刷通</view
       >
     </view>
     <view class="ann_linq" @tap="lingqus">
@@ -64,9 +64,9 @@
         <view class="linqu">领取规则</view>
         <view class="linqu_1">1.此活动仅对VIP及以上用户有效。</view>
         <view class="linqu_2">2.每周产生一笔云刷或代还，即可</view>
-        <view class="linqu_2s">领取10%鑫琏卡加速包。</view>
-        <view class="linqu_3">3.获取的鑫琏卡进度可在“卡券-鑫</view>
-        <view class="linqu_3s">琏卡中查看。</view>
+        <view class="linqu_2s">领取10%一刷通加速包。</view>
+        <view class="linqu_3">3.获取的一刷通进度可在“卡券-一</view>
+        <view class="linqu_3s">刷通中查看。</view>
         <view class="linqu_4">本活动最终解释权归xxxxxxxx所有</view>
         <view @tap="quxiao">
           <image

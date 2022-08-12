@@ -62,7 +62,7 @@
 			<view v-show="is_have_card!==0" @tap="get_pay_type(2)" class="grace-flex grace-flex-vcenter" style="margin-top: 5rpx; width:750rpx;height:100rpx;background:rgba(255,255,255,1);">
 				<view class="grace-rows">
 					<image src="../../static2/xlkzf.png" style="margin-left: 31rpx; width: 70rpx;height: 70rpx;"></image>
-					<text style="margin-left: 31rpx; font-size:26rpx;font-weight:400;color:rgba(42,42,42,1);line-height:30px;">鑫链卡支付</text>
+					<text style="margin-left: 31rpx; font-size:26rpx;font-weight:400;color:rgba(42,42,42,1);line-height:30px;">一刷通支付</text>
 					<image :src="pay_tape===2?'../../static/rise_vip_xuanzhong.png':'../../static/rise_vip_weixuanzhong.png'" style="position: relative; top: 17rpx;left: 375rpx; width: 32rpx;height: 32rpx;"></image>
 				</view>
 			</view>

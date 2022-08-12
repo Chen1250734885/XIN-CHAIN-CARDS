@@ -85,7 +85,7 @@
 		{
 			"path": "pages/profit/Xinka_record",
 			"style": {
-				"navigationBarTitleText": "鑫链卡记录",
+				"navigationBarTitleText": "一刷通记录",
 				"navigationBarBackgroundColor": "#2483F5"
 			}
 
@@ -572,14 +572,14 @@
 		{
 			"path": "pages/profit/Xinka",
 			"style": {
-				"navigationBarTitleText": "鑫链卡",
+				"navigationBarTitleText": "一刷通",
 				"navigationBarBackgroundColor": "#1678FF"
 			}
 		},
 		{
 			"path": "pages/profit/Use_file",
 			"style": {
-				"navigationBarTitleText": "鑫链卡使用",
+				"navigationBarTitleText": "一刷通使用",
 				"navigationBarBackgroundColor": "#1678FF"
 			}
 		},

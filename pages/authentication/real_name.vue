@@ -30,7 +30,7 @@
 	export default {
 		data() {
 			return {
-				name: '鑫琏卡',
+				name: '一刷通',
 				identity: '5100000000000'
 			}
 		},

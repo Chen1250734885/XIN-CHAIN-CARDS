@@ -39,7 +39,7 @@
 		</view>
 		<!-- 主体内容 -->
 		<!-- 銀行卡、我的卡卷、我的卷包 -->
-		<view class="mxz grace-rows" style="display:flex;flex-direction:row;justify-content:space-between;align-items:cente;">
+		<view class="mxz grace-rows" style="display:flex;flex-direction:row;justify-content:space-between;align-items:center;">
 			<view class="grace-columns" @tap="minxi">
 				<view class="yinhangka">
 					<!-- 银行卡 -->
@@ -76,13 +76,13 @@
 					</view>
 				</view>
 			</view>
-			<!-- 新增 -->
+			<!-- 券包 -->
 			<view class="grace-columns" @tap="xinzs">
 				<view class="myjuancard">
 					<!-- 我的券包 -->
 					<view class="middle_xianshi" style="margin-top: 2rpx;" @tap="quansbaos">
-						<view class="middle_icon">
-							<image src="../../static/quansbao.png" style="width: 100%;height: 43rpx;" mode=""></image>
+						<view class="middle_icon_juanbao">
+							<image src="../../static/quansbao.png" style="width: 80%;height: 80%;" mode=""></image>
 						</view>
 						<view class="middle_name">
 							<text style="font-size:30rpx;font-family:PingFang SC;color:#565656;">券&nbsp;包</text>
@@ -341,19 +341,19 @@
 	}
 
 	.yinhangka {
-		width: 180rpx;
-		height: 130rpx;
+		width: 200rpx;
+		height: 80rpx;
 		/* background: (rgba(170, 255, 255, 1.0)); */
 		background-color: #fff;
 		border-radius: 10rpx;
 		margin-top: 35rpx;
-		margin-left: 41rpx;
+		margin-left: 30rpx;
 		margin-bottom: 20rpx;
 	}
 
 	.mykajuan {
-		width: 180rpx;
-		height: 130rpx;
+		width: 200rpx;
+		height: 80rpx;
 		/* background: linear-gradient(54deg, rgba(255, 85, 127, 1.0) 0%, rgba(170, 0, 0, 1.0) 100%); */
 		background-color: #fff;
 		border-radius: 10rpx;
@@ -363,15 +363,15 @@
 	}
 
 	.myjuancard {
-		width: 180rpx;
-		height: 130rpx;
+		width: 200rpx;
+		height: 80rpx;
 		/* background: linear-gradient(54deg, rgba(255, 255, 0, 1.0) 0%, rgba(255, 170, 0, 1.0) 100%); */
 		background-color: #fff;
 		border-radius: 10rpx;
 		margin-top: 35rpx;
 		margin-left: 41rpx;
 		margin-bottom: 20rpx;
-		margin-right: 41rpx;
+		margin-right: 30rpx;
 	}
 
 	.status_bar {
@@ -443,8 +443,16 @@
 		width: 48rpx;
 		height: 48rpx;
 		float: left;
-		margin-left: 5rpx;
-		margin-top: 40rpx;
+		margin-left: 10rpx;
+		margin-top: 15rpx;
+	}
+	.middle_icon_juanbao{
+		/* display: inline-block; */
+		width: 48rpx;
+		height: 48rpx;
+		float: left;
+		margin-left: 10rpx;
+		margin-top: 20rpx;
 	}
 	.huodo {
 		display: inline-block;
@@ -453,8 +461,8 @@
 	}
 	.middle_name{
 		display: inline-block;
-		margin-left: 10rpx;
-		margin-top: 45rpx;
+		margin-left: 15rpx;
+		margin-top: 18rpx;
 	}
 	.tbs {
 		display: inline-block;

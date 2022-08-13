@@ -8,9 +8,9 @@
 				<view style="z-index: 99;margin:0 auto;">
 					<!-- 没有收益时显示 -->
 					<view v-if="level_name!=='免费用户'">
-						<view style="font-size:36rpx;font-weight:bold;color:rgba(255,255,255,1);margin-top: -500rpx;">收益
+						<view style="font-size:48rpx;font-weight:bold;color:rgba(255,255,255,1);margin-top: -500rpx;">收益
 						</view>
-						<view style="font-size:30rpx;color:rgba(255,255,255,1);margin-top: 30rpx;margin-left: 8rpx;">余额
+						<view style="font-size:30rpx;color:rgba(255,255,255,1);margin-top: 30rpx;margin-left: 16rpx;">余额
 						</view>
 					</view>
 					<!-- 有收益时显示 -->
@@ -30,7 +30,8 @@
 				<!-- 余额 -->
 				<view
 					style="font-size:70rpx;font-weight:bold;color:rgba(255,255,255,1);z-index: 99;margin: -339rpx auto;">
-					{{jine}}</view>
+					{{jine}}
+				</view>
 				<!-- 是否是vip -->
 				<view class="tixiab" @tap="tixian(is_vip)">{{is_vip!==0? '提现':'升级'}}</view>
 				<!-- 明细、消费过、新增 -->
@@ -39,10 +40,12 @@
 						<view class="daijihuo">
 							<view
 								style="font-size:26rpx;font-family:PingFang SC;font-weight:400;color:rgba(52,52,52,1);text-align: center;margin-top: 28rpx;">
-								{{activateds}}</view>
+								{{activateds}}
+							</view>
 							<view
 								style="font-size:32rpx;font-family:PingFang SC;font-weight:400;color:rgba(52,52,52,1);text-align: center;">
-								{{activated}}</view>
+								{{activated}}
+							</view>
 						</view>
 					</view>
 					<!-- 消费过 -->
@@ -50,10 +53,12 @@
 						<view class="xiaofeiguo" @tap="tuig">
 							<view
 								style="font-size:26rpx;font-family:PingFang SC;font-weight:400;color:rgba(52,52,52,1);text-align: center;margin-top: 28rpx;">
-								{{effectives}}</view>
+								{{effectives}}
+							</view>
 							<view
 								style="font-size:32rpx;font-family:PingFang SC;font-weight:400;color:rgba(52,52,52,1);text-align: center;">
-								{{effective}}人</view>
+								{{effective}}人
+							</view>
 						</view>
 					</view>
 					<!-- 新增 -->
@@ -61,10 +66,12 @@
 						<view class="xinzeng">
 							<view
 								style="font-size:26rpx;font-family:PingFang SC;font-weight:400;color:rgba(52,52,52,1);text-align: center;margin-top: 28rpx;">
-								{{todays}}</view>
+								{{todays}}
+							</view>
 							<view
 								style="font-size:32rpx;font-family:PingFang SC;font-weight:400;color:rgba(52,52,52,1);text-align: center;">
-								{{today}}</view>
+								{{today}}
+							</view>
 						</view>
 					</view>
 				</view>
@@ -76,7 +83,7 @@
 							style="font-size: 48rpx;font-weight:bold;color:rgba(255,96,0,1);margin-top: 12rpx;margin-right: 41rpx;">{{level_name}}</text>
 					</view>
 					<!-- 隐藏 -->
-<!-- 					<view>
+					<!-- 					<view>
 						<image v-if="level_name!=='免费用户'" src="../../static2/vipyishnag.png" mode=""
 							style="width: 680rpx;height: 160rpx;margin-left: 10rpx;"></image>
 						<image v-else src="../../static2/miafei.png" mode=""

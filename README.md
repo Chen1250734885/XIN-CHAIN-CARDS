@@ -161,6 +161,52 @@
 - card_coupon2(抵用券-->**未使用**/已使用)
 - deduction(抵扣劵明细)
 - Limited_activities(限时活动)
+- materials(编辑资料)
+- personal_centers(我的页面)
+
+### Picture_seriously(图片认证)
+
+seriously(身份证照片+储蓄卡照片-->(未用))
+
+### preview_plan(预览计划)
+
+### profit(收益相关)
+
+- cash_withdrawal(余额提现)
+- Consumed(我的推广)
+- Continued_use(未继续使用(40日内))
+- Details_activated(活跃用户)
+- income_details(我的分润)
+- New_today(今日新增用户)
+- profit(收益页面)
+- Use_file(一刷通使用)
+- withdrawals_record(提现记录)
+- Xinka(一刷通卡片页)![image-20220815110928527](https://chenwei-blog-1301583529.cos.ap-chengdu.myqcloud.com/%E4%B8%80%E5%88%B7%E9%80%9A%E5%8D%A1%E7%89%87.png)
+- Xinka_record(一刷通记录)
+
+### register(注册)
+
+### Repayment_plan(火星3.0还款)
+
+### rise_vip
+
+- rise_vip(升级代理)
+- shuyintai(收银台-->支付信息)
+- shuyintais(收银台-->收款信息)
+
+### share(分享功能)
+
+share(分享login页)
+
+share_qr_code(分享二维码功能-->附带推荐人邀请码+下载信息)
+
+### shouxin(授信还款)
+
+### souxin_view(使用教程)
+
+### transaction_details(交易详情)
+
+### update(应用更新)
 
 ## UI样式问题
 

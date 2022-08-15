@@ -5,43 +5,59 @@
 			<!-- 页面內容 -->
 			<!-- 余额 -->
 			<view style="background-image: url(../../static/beij.png);background-size: contain;" class="beij">
-					<view class="ye ">余额</view>
-					<view class="yes">
-						<text >{{residue}}</text>
-					</view>
+				<view class="ye ">余额</view>
+				<view class="yes">
+					<text>{{residue}}</text>
+				</view>
 			</view>
 
 			<!-- 银行卡 -->
-			<view @tap="showDialog1" style="width:750rpx;height:80rpx;background:rgba(255,255,255,1);line-height: 80rpx;margin-top: 45rpx;">
+			<view @tap="showDialog1"
+				style="width:750rpx;height:80rpx;background:rgba(255,255,255,1);line-height: 80rpx;margin-top: 45rpx;">
 				<view class="grace-rows" style="position: relative;">
-					<image :src="bank_icon_url" style="position: relative;margin-left: 30rpx; width: 48rpx;height: 48rpx;margin-top: 17rpx;"></image>
-					<text style="margin-left: 30rpx; font-size:30rpx;font-weight:400;color:rgba(51,51,51,1);">{{ shoukuanname }}</text>
+					<image :src="bank_icon_url"
+						style="position: relative;margin-left: 30rpx; width: 48rpx;height: 48rpx;margin-top: 17rpx;">
+					</image>
+					<text
+						style="margin-left: 30rpx; font-size:30rpx;font-weight:400;color:rgba(51,51,51,1);">{{ shoukuanname }}</text>
 					<text style="font-size:30rpx;font-weight:400;color:rgba(0, 0, 0, 1);">({{ weihao }})</text>
-					<image src="../../static/jiantou.png" style="position: relative;top: 27rpx; margin-left: 180rpx; width: 15rpx;height: 26rpx;"></image>
+					<image src="../../static/jiantou.png"
+						style="position: relative;top: 27rpx; margin-left: 180rpx; width: 15rpx;height: 26rpx;"></image>
 				</view>
 			</view>
 
 			<view style="position: relative; top: 10rpx; width:750rpx;height:160rpx;background:rgba(255,255,255,1);">
 				<view class="shuli">提现数量:</view>
-				<view  class="grace-rows">
+				<view class="grace-rows">
 					<text class="fuhao">￥</text>
-					<input v-model="usable" type="number" placeholder='最大可提现数量为10400' placeholder-style="font-size:24rpx;"class="jinen"/>
-					<view @tap="quanbutixian" style="position: relative;top: 45rpx;left: 25rpx; width:150rpx;height:40rpx;font-size:24rpx;font-weight:400;color:rgba(22,120,255,1)">全部提现</view>
+					<input v-model="usable" type="number" placeholder='最大可提现数量为10400'
+						placeholder-style="font-size:24rpx;" class="jinen" />
+					<view @tap="quanbutixian"
+						style="position: relative;top: 45rpx;left: 25rpx; width:150rpx;height:40rpx;font-size:24rpx;font-weight:400;color:rgba(22,120,255,1)">
+						全部提现</view>
 				</view>
-				<view style="position: relative;left: 30rpx;top: 2rpx; width:702rpx;height:1rpx;background:rgba(241,241,241,1);"></view>
-				<view style="position: relative;top: 25rpx;left: 35rpx; font-size:30rpx;font-weight:400;color:rgba(255,30,0,1);margin-right: 35rpx;">温馨提示:提现数量需为100的整数倍，手续费为5%，请在每个工作日的10:00至21:00之间提现,周末提现时间为12:00至21:00</view>
+				<view
+					style="position: relative;left: 30rpx;top: 2rpx; width:702rpx;height:1rpx;background:rgba(241,241,241,1);">
+				</view>
+				<view
+					style="position: relative;top: 25rpx;left: 35rpx; font-size:30rpx;font-weight:400;color:rgba(255,30,0,1);margin-right: 35rpx;">
+					温馨提示:提现数量需为100的整数倍，手续费为5%，请在每个工作日的10:00至21:00之间提现,周末提现时间为12:00至21:00</view>
 			</view>
 
 			<view style="margin-top: 40rpx; margin-left: 30rpx;">
-				<view v-for="(item,index) in yaoqiu" :key="index" style="width: 750rpx; margin-top: 10rpx; font-size:26rpx;font-weight:400;color:rgba(255,30,0,1);">{{ item }}</view>
+				<view v-for="(item,index) in yaoqiu" :key="index"
+					style="width: 750rpx; margin-top: 10rpx; font-size:26rpx;font-weight:400;color:rgba(255,30,0,1);">
+					{{ item }}</view>
 			</view>
-			<button @tap="sumbit" style="margin-top: 199rpx; width:550rpx;height:96rpx;background:rgba(22,120,255,1);border-radius:5rpx;font-size:32rpx;font-weight:500;color:rgba(255,255,255,1);line-height: 96rpx;">提现</button>
-			
+			<button @tap="sumbit"
+				style="margin-top: 199rpx; width:550rpx;height:96rpx;background:rgba(22,120,255,1);border-radius:5rpx;font-size:32rpx;font-weight:500;color:rgba(255,255,255,1);line-height: 96rpx;">提现</button>
+
 			<view class="wqann" @tap="Goto('/pages/profit/withdrawals_record')">
-				<image :style="'left:'+moveX+'px;top:'+moveY+'px'" src="../../static2/tixianjilu.png" @touchstart="drag_start"
-				 @touchmove.prevent="drag_hmove" mode="aspectFit" style="width: 170rpx;height: 170rpx;"></image>
+				<image :style="'left:'+moveX+'px;top:'+moveY+'px'" src="../../static2/tixianjilu.png"
+					@touchstart="drag_start" @touchmove.prevent="drag_hmove" mode="aspectFit"
+					style="width: 170rpx;height: 170rpx;"></image>
 			</view>
-			
+
 			<!-- <view @tap="Goto('/pages/profit/withdrawals_record')" style="margin: 20rpx auto; width:130rpx;height:40rpx;font-size:26rpx;font-weight:500;color:rgba(153,153,153,1);">查看记录></view> -->
 			<!-- 支付账户遮罩 -->
 			<graceBottomDialog :show="show1" @closeDialog="closeDialog1">
@@ -57,24 +73,32 @@
 				</view>
 				<view slot="content">
 					<scroll-view class="grace-scroll-y" style="height: 600rpx;">
-						<view @tap="qiehuanshoukuan(item)" v-for="(item,index) in shoukuanzhanghu_list" :key="index" class="grace-rows grace-flex-vcenter"
-						 style="height: 80rpx;border-bottom: 2rpx solid #F7F7F7; ">
-							<image :src="item.bank_icon_color" style="width: 38rpx;height: 38rpx;margin-left: 30rpx;"></image>
-							<text style="margin-left: 25rpx; font-size:28rpx;font-weight:400;color:rgba(0,0,0,1);">{{item.bank_name}}({{item.bc_bank_number_c}})</text>
+						<view @tap="qiehuanshoukuan(item)" v-for="(item,index) in shoukuanzhanghu_list" :key="index"
+							class="grace-rows grace-flex-vcenter"
+							style="height: 80rpx;border-bottom: 2rpx solid #F7F7F7; ">
+							<image :src="item.bank_icon_color" style="width: 38rpx;height: 38rpx;margin-left: 30rpx;">
+							</image>
+							<text
+								style="margin-left: 25rpx; font-size:28rpx;font-weight:400;color:rgba(0,0,0,1);">{{item.bank_name}}({{item.bc_bank_number_c}})</text>
 						</view>
-						<view @tap="Goto('/pages/add_savings_card/add_savings_card')" class="grace-rows grace-flex-vcenter" style="height: 80rpx;">
-							<image src="../../static/tianjia.png" style="width: 38rpx;height: 38rpx;margin-left: 30rpx;"></image>
-							<text style="margin-left: 25rpx; font-size:30rpx;font-weight:400;color:rgba(0,0,0,1);">添加储蓄卡</text>
+						<view @tap="Goto('/pages/add_savings_card/add_savings_card')"
+							class="grace-rows grace-flex-vcenter" style="height: 80rpx;">
+							<image src="../../static/tianjia.png"
+								style="width: 38rpx;height: 38rpx;margin-left: 30rpx;"></image>
+							<text
+								style="margin-left: 25rpx; font-size:30rpx;font-weight:400;color:rgba(0,0,0,1);">添加储蓄卡</text>
 						</view>
 					</scroll-view>
 				</view>
 			</graceBottomDialog>
 			<!-- 提现弹框 -->
-			<uni-popup  ref="popup" type="center">
+			<uni-popup ref="popup" type="center">
 				<view class="popup">
 					<view class="tub">!</view>
-					<text style="font-size: 36rpx;color: #333333; line-height:290rpx;margin-left: 105rpx;">{{remind_str}}<text style="font-size: 36rpx;color: rgba(248, 90, 5, 1);">{{remind_num}}</text></text>
-					
+					<text
+						style="font-size: 36rpx;color: #333333; line-height:290rpx;margin-left: 105rpx;">{{remind_str}}<text
+							style="font-size: 36rpx;color: rgba(248, 90, 5, 1);">{{remind_num}}</text></text>
+
 					<view class="explas">{{remind_explain.substring(0,14)}}</view>
 					<view class="expla">{{remind_explain.substring(14)}}</view>
 					<view style="display: inline-block;">
@@ -87,8 +111,10 @@
 			<uni-popup ref="popups" type="center">
 				<view class="popups">
 					<view class="tubs">确认提现</view>
-					<text style="font-size: 20rpx;color: #333333; ;margin-left: 40rpx;line-height: 209rpx;">请到{{shoukuanname}}({{ weihao }})查<text style="position: relative;top: 30rpx;right: 220rpx;">收</text></text>
-					
+					<text
+						style="font-size: 20rpx;color: #333333; ;margin-left: 40rpx;line-height: 209rpx;">请到{{shoukuanname}}({{ weihao }})查<text
+							style="position: relative;top: 30rpx;right: 220rpx;">收</text></text>
+
 					<view class="daozhangs">2小时内到账</view>
 					<view class="dianji">
 						<text class="close" @tap="closes">取消</text>
@@ -135,7 +161,7 @@
 		onShow: function() {
 			this.shuaxin();
 			this.quanbutixian()
-		const {
+			const {
 				windowWidth,
 				windowHeight
 			} = uni.getSystemInfoSync();
@@ -185,12 +211,12 @@
 						vm.shoukuanname = vm.shoukuanzhanghu_list[0].bank_name;
 						vm.bank_icon_url = vm.shoukuanzhanghu_list[0].bank_icon_color;
 						vm.weihao = vm.shoukuanzhanghu_list[0].bc_bank_number_c;
-						vm.card_id=vm.shoukuanzhanghu_list[0].bc_id;
+						vm.card_id = vm.shoukuanzhanghu_list[0].bc_id;
 						// vm.yaoqiu=res.data.yaoqiu;
 						// vm.min=res.data.min;
-						
+
 					}
-					
+
 				)
 			},
 			//提现按钮
@@ -198,40 +224,40 @@
 				this.$refs.popups.open()
 			},
 			// 确认提现按钮
-			sumbqr(){
-				if(this.usable<100){
+			sumbqr() {
+				if (this.usable < 100) {
 					uni.showToast({
-						title:'请输入100的整数倍',
-						icon:'none'
+						title: '请输入100的整数倍',
+						icon: 'none'
 					})
 					this.$refs.popups.close()
-				}else{
+				} else {
 					var vm = this;
 					vm.req.mypost(
 						vm.lochost + '/index/index?method=beans_withdrawal', {
 							number: vm.usable,
 							bc_id: vm.card_id
 						},
-						function(res){
-							if(res.code == 200){
+						function(res) {
+							if (res.code == 200) {
 								uni.showToast({
-									title:res.msg,
-									icon:'none'
+									title: res.msg,
+									icon: 'none'
 								})
 								this.$refs.popups.close()
 								this.quanbutixian()
-							}else{
+							} else {
 								uni.showToast({
-									title:res.msg,
-									icon:'none'
+									title: res.msg,
+									icon: 'none'
 								})
 								vm.$refs.popups.close()
 							}
-							
+
 						}
 					)
 				}
-				
+
 			},
 			// 全部提现按钮
 			quanbutixian() {
@@ -245,10 +271,10 @@
 						vm.remind_num = res.data.remind_num
 						vm.remind_explain = res.data.remind_explain
 						vm.usable = res.data.usable
-						if(res.data.is_remind === 1){
+						if (res.data.is_remind === 1) {
 							vm.$refs.popup.open()
 						}
-						
+
 					}
 				)
 			},
@@ -268,7 +294,7 @@
 			close() {
 				this.$refs.popup.close()
 			},
-			closes(){
+			closes() {
 				this.$refs.popups.close()
 			}
 		},
@@ -283,8 +309,8 @@
 <style>
 	.beij {
 		flex: auto;
-		width: 300rpx ;
-		height: 300rpx ;
+		width: 300rpx;
+		height: 300rpx;
 		margin-top: 40rpx;
 		transform: translateX(225rpx);
 		/* text-align: center; */
@@ -300,30 +326,34 @@
 	.yes {
 		display: flex;
 		line-height: 300rpx;
-		transform: translate(40rpx,20rpx);
+		transform: translate(40rpx, 20rpx);
 		font-size: 45rpx;
 		font-weight: bold;
 		color: rgba(80, 160, 254, 1);
 		justify-content: center;
 	}
-	.shuli{
+
+	.shuli {
 		font-size: 24rpx;
 		transform: translateY(25rpx);
 		margin-left: 44rpx;
 	}
-	.jinen{
+
+	.jinen {
 		width: 500rpx;
-		height: 90rpx; 
-		font-size:30rpx;
-		color:rgba(52, 52, 52, 1);
+		height: 90rpx;
+		font-size: 30rpx;
+		color: rgba(52, 52, 52, 1);
 		margin-top: 25rpx;
 		margin-left: 50rpx;
 	}
-	.fuhao{
+
+	.fuhao {
 		margin-top: 35rpx;
 		transform: translateX(40rpx);
 		font-size: 48rpx;
 	}
+
 	.tub {
 		position: fixed;
 		width: 53rpx;
@@ -337,6 +367,7 @@
 		font-size: 48rpx;
 		text-align: center;
 	}
+
 	.tubs {
 		position: fixed;
 		margin-left: 190rpx;
@@ -346,18 +377,21 @@
 		font-size: 38rpx;
 		text-align: center;
 	}
+
 	.popup {
 		width: 540rpx;
 		height: 380rpx;
 		background-color: #FFFFFF;
 		border-radius: 10rpx;
 	}
+
 	.popups {
 		width: 490rpx;
 		height: 300rpx;
 		background-color: #FFFFFF;
 		border-radius: 20rpx;
 	}
+
 	.btn1 {
 		width: 540rpx;
 		height: 80rpx;
@@ -365,30 +399,35 @@
 		margin-top: 35rpx;
 		margin-left: 0;
 		margin-right: 0.1rpx;
-		border-radius:  0  0 10rpx 10rpx;
+		border-radius: 0 0 10rpx 10rpx;
 		line-height: 70rpx;
 		color: #FFFFFF;
 		font-size: 30rpx;
 		display: inline-block;
 	}
-	.daozhangs{
+
+	.daozhangs {
 		font-size: 15rpx;
-		color: rgba(154,154,154,1);
-		line-height:50rpx;
+		color: rgba(154, 154, 154, 1);
+		line-height: 50rpx;
 		margin-top: -60rpx;
 		margin-left: 180rpx;
-		}
-		.dianji{
-			margin-top: 40rpx;
-			margin-left: 70rpx;
-		}
-		.close{
-			font-size: 30rpx;
-		}
-		.qr{
-			font-size: 30rpx;
-			margin-left: 240rpx;
-		}
+	}
+
+	.dianji {
+		margin-top: 40rpx;
+		margin-left: 70rpx;
+	}
+
+	.close {
+		font-size: 30rpx;
+	}
+
+	.qr {
+		font-size: 30rpx;
+		margin-left: 240rpx;
+	}
+
 	.btn2 {
 		width: 269rpx;
 		height: 70rpx;
@@ -401,20 +440,23 @@
 		font-size: 30rpx;
 		display: inline-block;
 	}
-	.expla{
+
+	.expla {
 		font-size: 28rpx;
-		color:rgba(154,154,154,1);
-		margin-left:160rpx;
+		color: rgba(154, 154, 154, 1);
+		margin-left: 160rpx;
 		/* margin-top: -100rpx; */
 		margin-right: 82rpx;
 	}
-	.explas{
+
+	.explas {
 		font-size: 28rpx;
-		color:rgba(154,154,154,1);
+		color: rgba(154, 154, 154, 1);
 		margin-left: 70rpx;
 		margin-top: -100rpx;
 		margin-right: 82rpx;
 	}
+
 	.wqann {
 		position: relative;
 		margin-left: 550rpx;

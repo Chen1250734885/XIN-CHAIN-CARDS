@@ -13,13 +13,14 @@
 				</view>
 				<view class="sj_xhx"></view>
 			</view>
-			
+
 			<!-- 注册密码 -->
 			<view class="sj ">
 				<view class="grace-rows sj_sr">
 					<image src="../../static2/mima.png" style="width: 40rpx;height: 40rpx;"></image>
 					<text style="margin-left: 14rpx;">密&emsp;码：</text>
-					<input password="true" placeholder-class="mm" v-model="mima" placeholder="请设置密码" placeholder-style="font-size: 24rpx;" />
+					<input password="true" placeholder-class="mm" v-model="mima" placeholder="请设置密码"
+						placeholder-style="font-size: 24rpx;" />
 				</view>
 				<view class="sj_xhx"></view>
 			</view>
@@ -28,7 +29,7 @@
 				<view class="grace-rows sj_sr">
 					<image src="../../static2/yaoqingma.png" style="width: 40rpx;height: 40rpx;"></image>
 					<text style="margin-left: 14rpx;">邀请码：</text>
-					<input v-model="yaoqingma" placeholder="请输入邀请码或邀请人手机号码" placeholder-style="font-size: 24rpx;" />
+					<input v-model="yaoqingma" placeholder="请输入邀请码/邀请人手机号码" placeholder-style="font-size: 24rpx;" />
 				</view>
 				<view class="sj_xhx"></view>
 			</view>
@@ -38,20 +39,25 @@
 					<image src="../../static2/yanzhengma.png" style="width: 40rpx;height: 40rpx;"></image>
 					<text style="margin-left: 14rpx;">验证码：</text>
 					<input v-model="yanzhengma" placeholder="请输入验证码" placeholder-style="font-size: 24rpx;" />
-					<view  class="login-sendmsg-btn" @tap='getVCode'>{{vcodeBtnName}}</view>
+					<view class="login-sendmsg-btn" @tap='getVCode'>{{vcodeBtnName}}</view>
 				</view>
 				<view class="sj_xhx"></view>
 			</view>
 			<!-- 是否同意协议 -->
 			<view>
-				<image src="../../static2/butoyi.png" v-if="is_xuanzhong" mode="" style="width: 40rpx;height: 40rpx;transform: translateY(10rpx);margin-left: 24rpx;" @tap="butoyis"></image>
-				<image src="../../static2/toyi.png" v-else mode="" style="width: 40rpx;height: 40rpx;transform: translateY(10rpx);margin-left: 24rpx;" @tap="toyis"></image>
+				<image src="../../static2/butoyi.png" v-if="is_xuanzhong" mode=""
+					style="width: 40rpx;height: 40rpx;transform: translateY(10rpx);margin-left: 24rpx;" @tap="butoyis">
+				</image>
+				<image src="../../static2/toyi.png" v-else mode=""
+					style="width: 40rpx;height: 40rpx;transform: translateY(10rpx);margin-left: 24rpx;" @tap="toyis">
+				</image>
 				<text style="font-size: 28rpx;color: #999999;margin-left: 15rpx;">同意一刷通注册协议</text>
-			
+
 			</view>
 			<!-- 注册按钮 -->
-			<button @tap="reg" style="margin-top: 100rpx; width:550rpx;height:90rpx;background:rgba(79,159,254,1);border-radius:10rpx;"><text
-				 style="font-size:32rpx;font-weight:400;color:#FFF9F9;line-height:90rpx;letter-spacing:16rpx">注 册</text></button>
+			<button @tap="reg"
+				style="margin-top: 100rpx; width:550rpx;height:90rpx;background:rgba(79,159,254,1);border-radius:10rpx;"><text
+					style="font-size:32rpx;font-weight:400;color:#FFF9F9;line-height:90rpx;letter-spacing:16rpx">注册</text></button>
 
 			<!-- <view style="background-image: url(../../static/mybeijin.png); background-size: contain; width: 750rpx;height: 800rpx;">
 				<view style="background-image: url(../../static/logo3.0.png);background-size: contain;width: 170rpx;height: 218rpx;margin: 0 auto; position: relative;top: 47rpx;"></view>
@@ -115,54 +121,54 @@
 
 		},
 		methods: {
-			butoyis(){
+			butoyis() {
 				this.is_xuanzhong = false
 			},
-			toyis(){
+			toyis() {
 				this.is_xuanzhong = true
 			},
 			reg() {
 				if (this.phoneno.length > 0 && this.yanzhengma.length > 0 && this.mima.length > 0) {
-					if(this.is_xuanzhong == true){
+					if (this.is_xuanzhong == true) {
 						uni.showToast({
 							title: '请同意一刷通注册协议',
 							icon: "none"
 						});
-					}else{
+					} else {
 						this.req.post(
-						this.lochost + '/index/index?method=register', {
-							tel: this.phoneno,
-							password: this.mima,
-							share_tel: this.yaoqingma,
-							sms_code: this.yanzhengma
-						}, {},
-						function(res) {
-							console.log(res);
-							if (res.code === 200) {
-								var data = res.data;
-								uni.setStorageSync('user_id', data.id);
-								uni.setStorageSync('user_name', data.name);
-								uni.setStorageSync('user_identity', data.identity);
-								uni.setStorageSync('user_phone', data.tel);
-								uni.setStorageSync('user_level', data.level);
-								uni.setStorageSync('user_isset_gesture_pwd', data.isset_gesture_pwd);
-								uni.setStorageSync('user_isset_deal_pwd', data.isset_deal_pwd);
-								uni.setStorageSync('user_u_state', data.state);
-								uni.setStorageSync('user_token', data.token);
-								uni.showToast({
-									title: '注册成功！',
-									icon: "none"
-								});
-								uni.redirectTo({
-									url: '/pages/login/login'
-								});
+							this.lochost + '/index/index?method=register', {
+								tel: this.phoneno,
+								password: this.mima,
+								share_tel: this.yaoqingma,
+								sms_code: this.yanzhengma
+							}, {},
+							function(res) {
+								console.log(res);
+								if (res.code === 200) {
+									var data = res.data;
+									uni.setStorageSync('user_id', data.id);
+									uni.setStorageSync('user_name', data.name);
+									uni.setStorageSync('user_identity', data.identity);
+									uni.setStorageSync('user_phone', data.tel);
+									uni.setStorageSync('user_level', data.level);
+									uni.setStorageSync('user_isset_gesture_pwd', data.isset_gesture_pwd);
+									uni.setStorageSync('user_isset_deal_pwd', data.isset_deal_pwd);
+									uni.setStorageSync('user_u_state', data.state);
+									uni.setStorageSync('user_token', data.token);
+									uni.showToast({
+										title: '注册成功！',
+										icon: "none"
+									});
+									uni.redirectTo({
+										url: '/pages/login/login'
+									});
+								}
+								// uni.setStorageSync('user_id', 'hello');
+
 							}
-							// uni.setStorageSync('user_id', 'hello');
-							
-						}
-					);
+						);
 					}
-					
+
 				} else {
 					uni.showToast({
 						title: '请输入完整的信息',
@@ -190,7 +196,7 @@
 					this.lochost + '/index/index?method=sendSms', {
 						tel: this.phoneno,
 						class: 'register',
-					},{},
+					}, {},
 					function(res) {
 						console.log(res);
 						uni.showToast({
@@ -235,9 +241,11 @@
 		margin-top: -19rpx;
 		text-align: center;
 	}
-	input{
+
+	input {
 		margin-left: 50rpx;
 	}
+
 	/* input .mm{
 		margin-left: 30rpx;
 	} */

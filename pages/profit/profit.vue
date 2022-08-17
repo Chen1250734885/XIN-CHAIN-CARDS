@@ -185,506 +185,529 @@
 </template>
 
 <script>
-	import gracePage from "../../graceUI/components/gracePage.vue";
-	import dnIcon from "../../components/dn-icon_1.2/component/dn-icon/dn-icon.vue";
-	import {
-		myMixins
-	} from "../../components/myMixins/myMixins.js"
-	export default {
-		mixins: [myMixins],
-		data() {
-			return {
-				shouyi_name: false,
-				jine: 0,
-				is_vip: '',
-				activated: '',
-				activateds: '',
-				effective: '', // 直推用户人数
-				effectives: '',
-				today: '',
-				todays: '',
-				card_data: [],
-				level_name: '', //等级
-				performance_num_str: '', //绩效
-				is_vips: '', //VIP人数
-				card_num: '', //一刷通数量
-				sell_money: '',
-				start: [0, 0],
-				moveY: 0,
-				moveX: 0,
-				windowWidth: '',
-				windowHeight: '',
-			}
-		},
-		onLoad() {
-			const {
-				windowWidth,
-				windowHeight
-			} = uni.getSystemInfoSync();
-			this.windowWidth = windowWidth
-			this.windowHeight = windowHeight
-		},
-		onShow: function() {
-			this.loadData()
-		},
-		methods: {
-			drag_start(event) {
-				this.start[0] = event.touches[0].clientX - event.target.offsetLeft;
-				this.start[1] = event.touches[0].clientY - event.target.offsetTop;
-			},
-			drag_hmove(event) {
-				let tag = event.touches;
-				if (tag[0].clientX < 0) {
-					tag[0].clientX = 0
-				}
-				if (tag[0].clientY < 0) {
-					tag[0].clientY = 0
-				}
-				if (tag[0].clientX > this.windowWidth) {
-					tag[0].clientX = this.windowWidth
-				}
-				if (tag[0].clientY > this.windowHeight) {
-					tag[0].clientY = this.windowHeight
-				}
-				this.moveX = tag[0].clientX - this.start[0];
-				this.moveY = tag[0].clientY - this.start[1];
-			},
-			qiaozhuandaokehu() {
-				uni.navigateTo({
-					url: '/pages/Last_page/Custome_service'
-				})
-			},
-			// 获取页面数据
-			loadData() {
-				var vm = this;
-				vm.req.post(
-					vm.lochost + '/index/index?method=user_earnings', {}, {},
-					function(res) {
-						console.log(res);
-						vm.is_vip = res.data.ul_level
-						vm.is_vips = res.data.assess_vip_num
-						vm.card_num = res.data.card_num
-						vm.activated = res.data.await_activate_data.num
-						vm.activateds = res.data.await_activate_data.str
-						vm.effective = res.data.assess_recommend_num
-						vm.effectives = res.data.effective_use_data.str
-						vm.today = res.data.today_add_user_data.num
-						vm.todays = res.data.today_add_user_data.str
-						vm.level_name = res.data.level_name
-						vm.performance_num_str = res.data.performance_num_str
-						if (res.data.ul_beans == 0) {
-							vm.shouyi_name = false;
-							vm.jine = res.data.ul_beans;
-						} else {
-							vm.shouyi_name = true;
-							vm.jine = res.data.ul_beans;
-						}
-						var card_list = res.data.card_data
-						var card_data = [];
-						for (var i = 0; i < card_list.length; i++) {
-							card_data.push(card_list[i])
-						}
-						vm.card_data = card_data
+import gracePage from "../../graceUI/components/gracePage.vue";
+import dnIcon from "../../components/dn-icon_1.2/component/dn-icon/dn-icon.vue";
+import {
+  myMixins
+} from "../../components/myMixins/myMixins.js"
+export default {
+  mixins: [myMixins],
+  data () {
+    return {
+      shouyi_name: false,
+      jine: 0,
+      is_vip: '',
+      activated: '',
+      activateds: '',
+      effective: '', // 直推用户人数
+      effectives: '',
+      today: '',
+      todays: '',
+      card_data: [],
+      level_name: '', //等级
+      performance_num_str: '', //绩效
+      is_vips: '', //VIP人数
+      card_num: '', //一刷通数量
+      sell_money: '',
+      start: [0, 0],
+      moveY: 0,
+      moveX: 0,
+      windowWidth: '',
+      windowHeight: '',
+    }
+  },
+  onLoad () {
+    const {
+      windowWidth,
+      windowHeight
+    } = uni.getSystemInfoSync();
+    this.windowWidth = windowWidth
+    this.windowHeight = windowHeight
+  },
+  onShow: function () {
+    this.loadData()
+  },
+  methods: {
+    drag_start (event) {
+      this.start[0] = event.touches[0].clientX - event.target.offsetLeft;
+      this.start[1] = event.touches[0].clientY - event.target.offsetTop;
+    },
+    drag_hmove (event) {
+      let tag = event.touches;
+      if (tag[0].clientX < 0) {
+        tag[0].clientX = 0
+      }
+      if (tag[0].clientY < 0) {
+        tag[0].clientY = 0
+      }
+      if (tag[0].clientX > this.windowWidth) {
+        tag[0].clientX = this.windowWidth
+      }
+      if (tag[0].clientY > this.windowHeight) {
+        tag[0].clientY = this.windowHeight
+      }
+      this.moveX = tag[0].clientX - this.start[0];
+      this.moveY = tag[0].clientY - this.start[1];
+    },
+    qiaozhuandaokehu () {
+      uni.navigateTo({
+        url: '/pages/Last_page/Custome_service'
+      })
+    },
+    // 获取页面数据
+    loadData () {
+      var vm = this;
+      vm.req.post(
+        vm.lochost + '/index/index?method=user_earnings', {}, {},
+        function (res) {
+          console.log(res);
+          vm.is_vip = res.data.ul_level
+          vm.is_vips = res.data.assess_vip_num
+          vm.card_num = res.data.card_num
+          vm.activated = res.data.await_activate_data.num
+          vm.activateds = res.data.await_activate_data.str
+          vm.effective = res.data.assess_recommend_num
+          vm.effectives = res.data.effective_use_data.str
+          vm.today = res.data.today_add_user_data.num
+          vm.todays = res.data.today_add_user_data.str
+          vm.level_name = res.data.level_name
+          vm.performance_num_str = res.data.performance_num_str
+          if (res.data.ul_beans == 0) {
+            vm.shouyi_name = false;
+            vm.jine = res.data.ul_beans;
+          } else {
+            vm.shouyi_name = true;
+            vm.jine = res.data.ul_beans;
+          }
+          var card_list = res.data.card_data
+          var card_data = [];
+          for (var i = 0; i < card_list.length; i++) {
+            card_data.push(card_list[i])
+          }
+          vm.card_data = card_data
 
-					}
-				);
-			},
-			// 待激活用户
-			minxi() {
-				this.Goto('/pages/profit/Details_activated')
-			},
-			// 消费过用户
-			tuig() {
-				this.Goto('/pages/profit/Consumed')
-			},
-			// 今日新增
-			xinzs() {
-				this.Goto('/pages/profit/New_today')
-			},
-			// 未继续使用
-			jxshiy() {
-				this.Goto('/pages/profit/Continued_use')
-			},
-			//分润明细
-			fenrun() {
-				this.Goto('/pages/profit/income_details')
-			},
-			// 推荐佣金
-			tuij() {
-				this.Goto('/pages/profit/Xinka')
-			},
-			// 一刷通使用
-			use_sy(coding, card_id) {
-				this.Goto('/pages/profit/Use_file?card_id=' + card_id + '&coding=' + coding)
-			},
-			// 提现或升级
-			tixian(vip) {
-				if (vip !== 0) {
-					this.Goto('/pages/profit/cash_withdrawal?jine=' + this.jine)
-				} else {
-					this.Goto('/pages/rise_vip/rise_vip')
-				}
-			},
-			// 免费用户banner点击跳转升级页
-			mianfyh() {
-				this.Goto('/pages/rise_vip/rise_vip')
-			},
-			// 变现按钮
-			bianxian(card_id) {
-				console.log(card_id);
-				this.cc_id = card_id
-				this.id = card_id
-				var vm = this
-				vm.req.post(
-					vm.lochost + '/index/index?method=sell_money', {
-						card_id: card_id
-					}, {},
-					function(res) {
-						if (res.code == 200) {
-							vm.sell_money = res.data.sell_money
-							vm.$refs.popup.open()
-						}
-					}
-				)
+        }
+      );
+    },
+    // 待激活用户
+    minxi () {
+      this.Goto('/pages/profit/Details_activated')
+    },
+    // 消费过用户
+    tuig () {
+      this.Goto('/pages/profit/Consumed')
+    },
+    // 今日新增
+    xinzs () {
+      this.Goto('/pages/profit/New_today')
+    },
+    // 未继续使用
+    jxshiy () {
+      this.Goto('/pages/profit/Continued_use')
+    },
+    //分润明细
+    fenrun () {
+      this.Goto('/pages/profit/income_details')
+    },
+    // 推荐佣金
+    tuij () {
+      this.Goto('/pages/profit/Xinka')
+    },
+    // 一刷通使用
+    use_sy (coding, card_id) {
+      this.Goto('/pages/profit/Use_file?card_id=' + card_id + '&coding=' + coding)
+    },
+    // 提现或升级
+    tixian (vip) {
+      if (vip !== 0) {
+        this.Goto('/pages/profit/cash_withdrawal?jine=' + this.jine)
+      } else {
+        this.Goto('/pages/rise_vip/rise_vip')
+      }
+    },
+    // 免费用户banner点击跳转升级页
+    mianfyh () {
+      this.Goto('/pages/rise_vip/rise_vip')
+    },
+    // 变现按钮
+    bianxian (card_id) {
+      console.log(card_id);
+      this.cc_id = card_id
+      this.id = card_id
+      var vm = this
+      vm.req.post(
+        vm.lochost + '/index/index?method=sell_money', {
+        card_id: card_id
+      }, {},
+        function (res) {
+          if (res.code == 200) {
+            vm.sell_money = res.data.sell_money
+            vm.$refs.popup.open()
+          }
+        }
+      )
 
-			},
-			// 变现确认按钮
-			qr() {
-				var cc_id = this.cc_id;
-				console.log(cc_id);
+    },
+    // 变现确认按钮
+    qr () {
+      var cc_id = this.cc_id;
+      console.log(cc_id);
 
-				var vm = this
-				// vm.is_cover = true
-				vm.$refs.popup.close()
-				vm.req.post(
-					vm.lochost + '/index/index?method=apply_sell', {
-						card_id: vm.cc_id
-					}, {},
-					function(res) {
-						console.log(res);
-						if (res.code == 200) {
-							uni.redirectTo({
-								url: '/pages/profit/profit'
-							})
-						}
-					}
-				)
-			},
-			// 变现取消按钮
-			qx() {
-				this.$refs.popup.close()
-			},
+      var vm = this
+      // vm.is_cover = true
+      vm.$refs.popup.close()
+      vm.req.post(
+        vm.lochost + '/index/index?method=apply_sell', {
+        card_id: vm.cc_id
+      }, {},
+        function (res) {
+          console.log(res);
+          if (res.code == 200) {
+            uni.redirectTo({
+              url: '/pages/profit/profit'
+            })
+          }
+        }
+      )
+    },
+    // 变现取消按钮
+    qx () {
+      this.$refs.popup.close()
+    },
 
-			// 免费用户
-			yinchans() {
-				var vm = this;
-				vm.yingchang = true;
-				vm.req.post(
-					vm.lochost + '/mytrunk/userapi/getuser', {}, {},
-					function(res) {
-						vm.zhi = res.data.child[10000].zhi;
-						vm.jian = res.data.child[10000].jian;
+    // 免费用户
+    yinchans () {
+      var vm = this;
+      vm.yingchang = true;
+      vm.req.post(
+        vm.lochost + '/mytrunk/userapi/getuser', {}, {},
+        function (res) {
+          vm.zhi = res.data.child[10000].zhi;
+          vm.jian = res.data.child[10000].jian;
 
-					})
-			},
-			yinchan() {
-				this.yingchang = false;
-				this.zhi = '*';
-				this.jian = '*'
-			},
-			// VIP
-			vip_yin() {
-				var vm = this;
-				vm.yingchan = true;
-				vm.req.post(
-					vm.lochost + '/mytrunk/userapi/getuser', {}, {},
-					function(res) {
-						vm.vip_zhi = res.data.child[9999].zhi;
-						vm.vip_jian = res.data.child[9999].jian;
-					})
+        })
+    },
+    yinchan () {
+      this.yingchang = false;
+      this.zhi = '*';
+      this.jian = '*'
+    },
+    // VIP
+    vip_yin () {
+      var vm = this;
+      vm.yingchan = true;
+      vm.req.post(
+        vm.lochost + '/mytrunk/userapi/getuser', {}, {},
+        function (res) {
+          vm.vip_zhi = res.data.child[9999].zhi;
+          vm.vip_jian = res.data.child[9999].jian;
+        })
 
-			},
-			vip_yinc() {
-				this.yingchan = false;
-				this.vip_zhi = '*';
-				this.vip_jian = '*'
-			},
-			// 代理
-			dl_yin() {
-				var vm = this;
-				vm.yingcha = true;
-				vm.req.post(
-					vm.lochost + '/mytrunk/userapi/getuser', {}, {},
-					function(res) {
-						vm.daili_zhi = res.data.child[9998].zhi;
-						vm.daili_jian = res.data.child[9998].jian;
-					})
+    },
+    vip_yinc () {
+      this.yingchan = false;
+      this.vip_zhi = '*';
+      this.vip_jian = '*'
+    },
+    // 代理
+    dl_yin () {
+      var vm = this;
+      vm.yingcha = true;
+      vm.req.post(
+        vm.lochost + '/mytrunk/userapi/getuser', {}, {},
+        function (res) {
+          vm.daili_zhi = res.data.child[9998].zhi;
+          vm.daili_jian = res.data.child[9998].jian;
+        })
 
-			},
-			dl_yins() {
-				this.yingcha = false;
-				this.daili_zhi = '*';
-				this.daili_jian = '*'
-			},
-			// 合伙人
-			hehuo_yin() {
-				var vm = this;
-				vm.yingc = true;
-				vm.req.post(
-					vm.lochost + '/mytrunk/userapi/getuser', {}, {},
-					function(res) {
-						vm.hehuo_zhi = res.data.child[9992].zhi;
-						vm.hehuo_jian = res.data.child[9992].jian
-					})
+    },
+    dl_yins () {
+      this.yingcha = false;
+      this.daili_zhi = '*';
+      this.daili_jian = '*'
+    },
+    // 合伙人
+    hehuo_yin () {
+      var vm = this;
+      vm.yingc = true;
+      vm.req.post(
+        vm.lochost + '/mytrunk/userapi/getuser', {}, {},
+        function (res) {
+          vm.hehuo_zhi = res.data.child[9992].zhi;
+          vm.hehuo_jian = res.data.child[9992].jian
+        })
 
-			},
-			hehuo_yint() {
-				this.yingc = false;
-				this.hehuo_zhi = '*';
-				this.hehuo_jian = '*'
-			}
+    },
+    hehuo_yint () {
+      this.yingc = false;
+      this.hehuo_zhi = '*';
+      this.hehuo_jian = '*'
+    }
 
-		},
-		components: {
-			gracePage,
-			dnIcon
-		}
-	}
+  },
+  components: {
+    gracePage,
+    dnIcon
+  }
+}
 </script>
 
 <style>
-	.kef_s {
-		position: absolute;
-		top: 350rpx;
-		left: 598rpx;
-		z-index: 9999;
-		float: right;
-	}
+.kef_s {
+  position: absolute;
+  top: 350rpx;
+  left: 598rpx;
+  z-index: 9999;
+  float: right;
+}
 
-	.tixiab {
-		width: 160rpx;
-		height: 50rpx;
-		background-color: rgba(255, 255, 255, 1);
-		border-radius: 20rpx;
-		font-size: 24rpx;
-		color: rgba(249, 129, 0, 1);
-		z-index: 999;
-		margin: 360rpx auto;
-		line-height: 50rpx;
-		text-align: center;
-	}
+.tixiab {
+  width: 160rpx;
+  height: 50rpx;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  color: rgba(249, 129, 0, 1);
+  z-index: 999;
+  margin: 360rpx auto;
+  line-height: 50rpx;
+  text-align: center;
+}
 
-	.mxz {
-		width: 702rpx;
-		height: 200rpx;
-		background-color: rgba(255, 255, 255, 1);
-		border-radius: 10rpx;
-		margin-top: -289rpx;
-		z-index: 9999;
-		margin-left: 24rpx;
-	}
+.mxz {
+  width: 702rpx;
+  height: 200rpx;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10rpx;
+  margin-top: -289rpx;
+  z-index: 9999;
+  margin-left: 24rpx;
+}
 
-	.daijihuo {
-		width: 180rpx;
-		height: 130rpx;
-		background: linear-gradient(54deg, rgba(0, 170, 0, 1.0) 0%, rgba(170, 255, 255, 1.0) 100%);
-		border-radius: 10rpx;
-		margin-top: 35rpx;
-		margin-left: 41rpx;
-	}
+.daijihuo {
+  width: 180rpx;
+  height: 130rpx;
+  background: linear-gradient(
+    54deg,
+    rgba(0, 170, 0, 1) 0%,
+    rgba(170, 255, 255, 1) 100%
+  );
+  border-radius: 10rpx;
+  margin-top: 35rpx;
+  margin-left: 41rpx;
+}
 
-	.xiaofeiguo {
-		width: 180rpx;
-		height: 130rpx;
-		background: linear-gradient(54deg, rgba(255, 85, 127, 1.0) 0%, rgba(170, 0, 0, 1.0) 100%);
-		border-radius: 10rpx;
-		margin-top: 35rpx;
-		margin-left: 41rpx;
-	}
+.xiaofeiguo {
+  width: 180rpx;
+  height: 130rpx;
+  background: linear-gradient(
+    54deg,
+    rgba(226, 109, 130, 1) 0%,
+    rgba(198, 80, 90, 1) 100%
+  );
+  border-radius: 10rpx;
+  margin-top: 35rpx;
+  margin-left: 41rpx;
+}
 
-	.xinzeng {
-		width: 180rpx;
-		height: 130rpx;
-		background: linear-gradient(54deg, rgba(255, 255, 0, 1.0) 0%, rgba(255, 170, 0, 1.0) 100%);
-		border-radius: 10rpx;
-		margin-top: 35rpx;
-		margin-left: 41rpx;
-	}
+.xinzeng {
+  width: 180rpx;
+  height: 130rpx;
+  background: linear-gradient(
+    54deg,
+    rgba(250, 255, 148, 1) 0%,
+    rgba(255, 247, 12, 1) 100%
+  );
+  border-radius: 10rpx;
+  margin-top: 35rpx;
+  margin-left: 41rpx;
+}
 
-	.wjxsy {
-		width: 750rpx;
-		height: 100rpx;
-		background-color: #FFFFFF;
-		margin-top: 20rpx;
-	}
+.wjxsy {
+  width: 750rpx;
+  height: 100rpx;
+  background-color: #ffffff;
+  margin-top: 20rpx;
+}
 
-	.wjxsy_2 {
-		width: 750rpx;
-		height: 100rpx;
-		background-color: #FFFFFF;
-		margin-top: 10rpx;
-	}
+.wjxsy_2 {
+  width: 750rpx;
+  height: 100rpx;
+  background-color: #ffffff;
+  margin-top: 10rpx;
+}
 
-	.zhihao {
-		font-size: 30rpx;
-		line-height: 100rpx;
-		margin-left: 13rpx;
-	}
+.zhihao {
+  font-size: 30rpx;
+  line-height: 100rpx;
+  margin-left: 13rpx;
+}
 
-	.jiantos {
-		width: 20rpx;
-		height: 34rpx;
-		float: right;
-		margin-top: 35rpx;
-		margin-right: 24rpx;
-	}
+.jiantos {
+  width: 20rpx;
+  height: 34rpx;
+  float: right;
+  margin-top: 35rpx;
+  margin-right: 24rpx;
+}
 
+.btuns {
+  width: 180rpx;
+  height: 100rpx;
+  background: linear-gradient(
+    54deg,
+    rgba(250, 104, 71, 1) 0%,
+    rgba(250, 177, 51, 1) 100%
+  );
+  border-radius: 10px;
+  margin-top: -15rpx;
+  border: none;
+}
 
-	.btuns {
-		width: 180rpx;
-		height: 100rpx;
-		background: linear-gradient(54deg, rgba(250, 104, 71, 1) 0%, rgba(250, 177, 51, 1) 100%);
-		border-radius: 10px;
-		margin-top: -15rpx;
-		border: none;
-	}
+.tes {
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+}
 
-	.tes {
-		font-size: 26rpx;
-		font-family: PingFang SC;
-		font-weight: bold;
-		color: rgba(51, 51, 51, 1);
-	}
+.btun {
+  width: 180rpx;
+  height: 100rpx;
+  background: linear-gradient(
+    54deg,
+    rgba(255, 186, 0, 1) 0%,
+    rgba(255, 252, 0, 1) 100%
+  );
+  border-radius: 10px;
+  margin-top: -15rpx;
+  border: none;
+}
 
-	.btun {
-		width: 180rpx;
-		height: 100rpx;
-		background: linear-gradient(54deg, rgba(255, 186, 0, 1) 0%, rgba(255, 252, 0, 1) 100%);
-		border-radius: 10px;
-		margin-top: -15rpx;
-		border: none;
-	}
+.btunt {
+  width: 180rpx;
+  height: 100rpx;
+  background: linear-gradient(
+    54deg,
+    rgba(0, 228, 220, 1) 0%,
+    rgba(0, 240, 130, 1) 100%
+  );
+  border-radius: 10px;
+  margin-top: -15rpx;
+  border: none;
+}
 
-	.btunt {
-		width: 180rpx;
-		height: 100rpx;
-		background: linear-gradient(54deg, rgba(0, 228, 220, 1) 0%, rgba(0, 240, 130, 1) 100%);
-		border-radius: 10px;
-		margin-top: -15rpx;
-		border: none;
-	}
+.daili {
+  margin-top: 20rpx;
+}
 
-	.daili {
-		margin-top: 20rpx;
-	}
+.mianfei {
+  width: 750rpx;
+  height: 100rpx;
+  background: rgba(255, 255, 255, 1);
+  line-height: 100rpx;
+}
 
-	.mianfei {
-		width: 750rpx;
-		height: 100rpx;
-		background: rgba(255, 255, 255, 1);
-		line-height: 100rpx;
-	}
+.yh {
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  margin-left: 24rpx;
+}
 
-	.yh {
-		font-size: 36rpx;
-		font-family: PingFang SC;
-		font-weight: bold;
-		color: rgba(51, 51, 51, 1);
-		margin-left: 24rpx;
-	}
+.zt {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  margin-left: 77rpx;
+}
 
-	.zt {
-		font-size: 24rpx;
-		font-family: PingFang SC;
-		font-weight: 400;
-		color: rgba(51, 51, 51, 1);
-		margin-left: 77rpx;
-	}
+.zt_2 {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  margin-left: 162rpx;
+}
 
-	.zt_2 {
-		font-size: 24rpx;
-		font-family: PingFang SC;
-		font-weight: 400;
-		color: rgba(51, 51, 51, 1);
-		margin-left: 162rpx;
-	}
+.zt_3 {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  margin-left: 110rpx;
+}
 
-	.zt_3 {
-		font-size: 24rpx;
-		font-family: PingFang SC;
-		font-weight: 400;
-		color: rgba(51, 51, 51, 1);
-		margin-left: 110rpx;
-	}
+.zts {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  margin-left: 129rpx;
+}
 
-	.zts {
-		font-size: 24rpx;
-		font-family: PingFang SC;
-		font-weight: 400;
-		color: rgba(51, 51, 51, 1);
-		margin-left: 129rpx;
-	}
+.dns {
+  width: 40rpx;
+  height: 40rpx;
+  float: right;
+  margin-right: 22rpx;
+  margin-top: 30rpx;
+}
 
-	.dns {
-		width: 40rpx;
-		height: 40rpx;
-		float: right;
-		margin-right: 22rpx;
-		margin-top: 30rpx;
-	}
+.vip_s {
+  width: 750rpx;
+  height: 100rpx;
+  background: rgba(255, 255, 255, 1);
+  line-height: 100rpx;
+  margin-top: 8rpx;
+}
 
-	.vip_s {
-		width: 750rpx;
-		height: 100rpx;
-		background: rgba(255, 255, 255, 1);
-		line-height: 100rpx;
-		margin-top: 8rpx;
-	}
-
-	.buan {
-		/* width: 750rpx;
+.buan {
+  /* width: 750rpx;
 		height: 100rpx;
 		background-color: #FFFFFF; */
-		margin-top: 20rpx;
-	}
+  margin-top: 20rpx;
+}
 
-	.bhan {
-		display: flex;
-		justify-content: space-between;
-	}
+.bhan {
+  display: flex;
+  justify-content: space-between;
+}
 
-	.bianhao {
-		float: left;
-		margin-top: -45rpx;
-		z-index: 99;
-		color: rgba(250, 146, 52, 1);
-		font-size: 29rpx;
-		margin-left: 120rpx;
-		transform: translate(-60rpx, -40rpx);
-	}
+.bianhao {
+  float: left;
+  margin-top: -45rpx;
+  z-index: 99;
+  color: rgba(250, 146, 52, 1);
+  font-size: 29rpx;
+  margin-left: 120rpx;
+  transform: translate(-60rpx, -40rpx);
+}
 
-	.bianx {
-		margin-right: 30rpx;
-		transform: translateX(-30rpx);
-	}
+.bianx {
+  margin-right: 30rpx;
+  transform: translateX(-30rpx);
+}
 
-	.btn {
-		display: inline-block;
-		/* float: right; */
-		width: 110rpx;
-		height: 35rpx;
-		font-size: 22rpx;
-		line-height: 35rpx;
-		transform: translateY(-80rpx);
-		/* background-color: #000000; */
-		color: #FFFFFF;
-		border: 1rpx solid #FFFFFF;
-		text-align: center;
-		border-radius: 10rpx;
-		/* margin-right: 18rpx; */
-	}
+.btn {
+  display: inline-block;
+  /* float: right; */
+  width: 110rpx;
+  height: 35rpx;
+  font-size: 22rpx;
+  line-height: 35rpx;
+  transform: translateY(-80rpx);
+  /* background-color: #000000; */
+  color: #ffffff;
+  border: 1rpx solid #ffffff;
+  text-align: center;
+  border-radius: 10rpx;
+  /* margin-right: 18rpx; */
+}
 
-	/* .vuan_b{
+/* .vuan_b{
 		width: 200rpx;
 		height: 70rpx;
 		background:rgba(22,120,255,1);
@@ -693,111 +716,114 @@
 		font-size:32rpx;color:rgba(255,255,255,1);line-height: 70rpx;
 		transform: translateY(-20rpx);
 	} */
-	.dengji {
-		width: 702rpx;
-		height: 240rpx;
-		border-radius: 10rpx;
-		background-color: #FFFFFF;
-		margin-top: 10rpx;
-		margin-left: 24rpx;
-	}
+.dengji {
+  width: 702rpx;
+  height: 240rpx;
+  border-radius: 10rpx;
+  background-color: #ffffff;
+  margin-top: 10rpx;
+  margin-left: 24rpx;
+}
 
-	.xiaoji {
-		position: absolute;
-		top: 820rpx;
-		left: 163rpx;
-		width: 320rpx;
-		height: 40rpx;
-		border-radius: 20rpx;
-		border: 1px solid rgba(255, 255, 255, 1);
-		background: linear-gradient(90deg, rgba(255, 40, 106, 1) 0%, rgba(255, 199, 80, 1) 100%);
-		text-align: center;
-		line-height: 40rpx;
-		color: #FFFFFF;
-		z-index: 999;
-	}
+.xiaoji {
+  position: absolute;
+  top: 820rpx;
+  left: 163rpx;
+  width: 320rpx;
+  height: 40rpx;
+  border-radius: 20rpx;
+  border: 1px solid rgba(255, 255, 255, 1);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 40, 106, 1) 0%,
+    rgba(255, 199, 80, 1) 100%
+  );
+  text-align: center;
+  line-height: 40rpx;
+  color: #ffffff;
+  z-index: 999;
+}
 
-	.tabk {
-		width: 540rpx;
-		height: 340rpx;
-		background-color: #FFFFFF;
-		border-radius: 10rpx;
+.tabk {
+  width: 540rpx;
+  height: 340rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+}
 
-	}
+.tabk_b {
+  font-size: 32rpx;
+  margin-left: 180rpx;
+  transform: translateY(40rpx);
+}
 
-	.tabk_b {
-		font-size: 32rpx;
-		margin-left: 180rpx;
-		transform: translateY(40rpx);
-	}
+.tabk_x {
+  margin-top: 10rpx;
+  font-size: 32rpx;
+  margin-left: 120rpx;
+  transform: translateY(40rpx);
+}
 
-	.tabk_x {
-		margin-top: 10rpx;
-		font-size: 32rpx;
-		margin-left: 120rpx;
-		transform: translateY(40rpx);
-	}
+.tabk_y {
+  font-size: 32rpx;
+  margin-left: 180rpx;
+  transform: translateY(40rpx);
+}
 
-	.tabk_y {
-		font-size: 32rpx;
-		margin-left: 180rpx;
-		transform: translateY(40rpx);
-	}
+.tabk_k {
+  font-size: 22rpx;
+  margin-left: 120rpx;
+  transform: translateY(40rpx);
+  color: rgba(154, 154, 154, 1);
+  margin-top: 21rpx;
+}
 
-	.tabk_k {
-		font-size: 22rpx;
-		margin-left: 120rpx;
-		transform: translateY(40rpx);
-		color: rgba(154, 154, 154, 1);
-		margin-top: 21rpx;
-	}
+.bnts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 82rpx;
+}
 
-	.bnts {
-		display: flex;
-		justify-content: space-between;
-		margin-top: 82rpx;
-	}
+.qr_s {
+  width: 270rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  background-color: rgba(80, 160, 254, 1);
+  font-size: 34rpx;
+  color: #ffffff;
+  border-radius: 0 0 0 10rpx;
+  text-align: center;
+}
 
-	.qr_s {
-		width: 270rpx;
-		height: 70rpx;
-		line-height: 70rpx;
-		background-color: rgba(80, 160, 254, 1);
-		font-size: 34rpx;
-		color: #FFFFFF;
-		border-radius: 0 0 0 10rpx;
-		text-align: center;
-	}
+.qx_s {
+  width: 270rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  background-color: rgba(80, 187, 254, 1);
+  font-size: 34rpx;
+  color: #ffffff;
+  border-radius: 0 0 10rpx 0;
+  text-align: center;
+}
 
-	.qx_s {
-		width: 270rpx;
-		height: 70rpx;
-		line-height: 70rpx;
-		background-color: rgba(80, 187, 254, 1);
-		font-size: 34rpx;
-		color: #FFFFFF;
-		border-radius: 0 0 10rpx 0;
-		text-align: center;
-	}
-
-	.covse {
-		/* position:absolute;left:0rpx;top:0rpx; */
-		margin-top: -269rpx;
-		background: rgba(0, 0, 0, 1);
-		width: 520rpx;
-		/*宽度设置为100%，这样才能使隐藏背景层覆盖原页面*/
-		height: 270rpx;
-		filter: alpha(opacity=60);
-		/*设置透明度为60%*/
-		opacity: 0.5;
-		/*非IE浏览器下设置透明度为60%*/
-		/* display: none; */
-		transform: translateY(-40rpx);
-		margin-left: 45rpx;
-		z-Index: 9;
-		border-radius: 20rpx;
-		text-align: center;
-	}
+.covse {
+  /* position:absolute;left:0rpx;top:0rpx; */
+  margin-top: -269rpx;
+  background: rgba(0, 0, 0, 1);
+  width: 520rpx;
+  /*宽度设置为100%，这样才能使隐藏背景层覆盖原页面*/
+  height: 270rpx;
+  filter: alpha(opacity=60);
+  /*设置透明度为60%*/
+  opacity: 0.5;
+  /*非IE浏览器下设置透明度为60%*/
+  /* display: none; */
+  transform: translateY(-40rpx);
+  margin-left: 45rpx;
+  z-index: 9;
+  border-radius: 20rpx;
+  text-align: center;
+}
 </style>
 
 

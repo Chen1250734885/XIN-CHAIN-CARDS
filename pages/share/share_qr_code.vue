@@ -173,12 +173,12 @@
 												// dy: bgObj.width * 0.98
 												
 												// 下面的dx和dy数据适配iPhone6/7/8系列
-												// dx: screenWidth - 207,
-												// dy: screenHeight - 180
+												dx: screenWidth - 207,
+												dy: screenHeight - 180
 												
 												// 下面的dx和dy数据适配iPhoneX系列及其以上
-												dx: bgObj.width * 0.44,
-												dy: bgObj.width * 1.45
+												// dx: bgObj.width * 0.44,
+												// dy: bgObj.width * 1.45
 											}
 										}
 									},
@@ -189,12 +189,12 @@
 										backgroundColor: 'rgba(255,255,255,255)',
 										
 										// 下面的dx和dy数据适配iPhone6/7/8系列
-										// dx: screenWidth - 245,
-										// dy: screenHeight - 310,
+										dx: screenWidth - 245,
+										dy: screenHeight - 310,
 										
 										// 下面的dx和dy数据适配iPhoneX系列及其以上
-										dx:	 bgObj.width * 0.345,
-										dy:  bgObj.width * 1.09
+										// dx:	 bgObj.width * 0.345,
+										// dy:  bgObj.width * 1.09
 									}
 								]);
 							})
@@ -211,7 +211,7 @@
 					this.img_base64 = d.poster.tempFilePath;
 					this.poster.finalPath = d.poster.tempFilePath;
 					console.log(this.poster.finalPath);
-					// this.qrShow = true;
+					this.qrShow = true;
 				} catch (e) {
 					_app.hideLoading();
 					_app.showToast(JSON.stringify(e));

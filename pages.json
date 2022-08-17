@@ -182,12 +182,12 @@
 				"navigationBarBackgroundColor": "#2483F5"
 			}
 		},
-		{
-			"path": "pages/test/test",
-			"style": {
-				"navigationBarTitleText": "测试"
-			}
-		},
+		// {
+		// 	"path": "pages/test/test",
+		// 	"style": {
+		// 		"navigationBarTitleText": "测试"
+		// 	}
+		// },
 		{
 			"path": "pages/web_view/web_view",
 			"style": {
@@ -734,8 +734,7 @@
 				}
 			}
 		}
-
-	],
+    ],
 	// "globalStyle": {
 	// 	"navigationBarTitleText": "我的",
 	// 	"navigationBarBackgroundColor": "#4F9FFE",

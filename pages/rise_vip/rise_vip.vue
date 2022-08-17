@@ -71,7 +71,9 @@
 			<button @tap="up_vip()" style="margin-top: 100rpx; width:687rpx;height:90rpx;background:rgba(22,120,255,1);border-radius:6rpx;font-size:32rpx;font-weight:400;color:rgba(255,255,255,1);line-height:90rpx;">立即升级</button>
 			<!-- <button v-show="!xianshi"  style="margin-top: 100rpx; width:687rpx;height:90rpx;background:#999999;border-radius:6rpx;font-size:32rpx;font-weight:400;color:rgba(255,255,255,1);line-height:90rpx;">已是会员</button> -->
 		</view>
+		<form action="https://openapi.alipay.com/gateway.do" method="post" id="alipays" style="display: none;"></form>
 	</gracePage>
+	
 </template>
 <!-- <script src="//res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script> -->
 <script src="https://gw.alipayobjects.com/as/g/h5-lib/alipayjsapi/3.1.1/alipayjsapi.inc.min.js"></script>
@@ -117,7 +119,7 @@
 				vm.req.post(
 					vm.lochost + '/index/index?method=user_upgrade_page', {}, {},
 					function(res) {
-						console.log(res);
+						console.log(res,"=============");
 						vm.texts = res.data.text;
 						vm.data = res.data.data;
 						vm.tubiao = res.data.tubiao;
@@ -224,17 +226,30 @@
 
 
 						} else if (type === 2) {
-							const form = res.data.pay_signature;
-							// deleteExisting('#alipay'); // 判断之前是否插入过#alipay
-							const div = document.createElement('div');
+							let form = res.data.pay_signature;
+							// // deleteExisting('#alipay'); // 判断之前是否插入过#alipay
+							let div = document.createElement('form');
 							div.id = 'alipay';
-							div.innerHTML = form;
+							div.action = 'https://openapi.alipay.com/gateway.do';
+							div.method = 'post';
+							let newForm = form.split("&");
+							let html = '';
+							newForm.forEach(function (item) {
+							    let items = item.split("=");
+								let value = items[1]
+								let name = items[0]
+								if(items[0]=='timestamp'){
+									value = value.replace("+"," ");
+								}
+								html += '<input name="'+items[0]+'" value="'+decodeURIComponent(value)+'">'
+							});
+							console.log(html);
+							div.innerHTML = html;
 							document.body.appendChild(div);
-							document.querySelector('#alipay').children[0].submit(); // 执行后会唤起支付宝
-
+							document.querySelector('#alipay').submit(); // 执行后会唤起支付宝
 						}
 
-
+						// 为正常对接支付宝支付(未配置支付宝公钥/私钥)
 
 
 

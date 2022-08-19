@@ -481,6 +481,6 @@
 		line-height: 70rpx;
 		margin-left: -44rpx;
 		font-size: 28rpx;
-		margin-top: 66rpx;
+		margin-top: 150rpx;
 	}
 </style>

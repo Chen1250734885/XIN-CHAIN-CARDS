@@ -108,9 +108,9 @@
 					}
 				)
 			},
+			// 修复无法上传的bug(view页面的卡号id与下面未匹配)
 			// 上传身份证正面照片
 			getIDCard() {
-				// #ifdef APP-PLUS
 				var vm = this
 				uni.chooseImage({
 					count: 1, //默认9
@@ -121,101 +121,6 @@
 							title: '加载中',
 							mask: true,
 						});
-						console.log('压缩前图片体积', res.tempFiles[0].size);
-						let path = res.tempFilePaths[0];
-						let pathDst = path.substring(0, path.lastIndexOf("."));
-						var localPath = plus.zip.compressImage(path);
-						//压缩图片
-						if (res.tempFiles[0].size > 504800) {
-							plus.zip.compressImage({
-									src: path, //原路径
-									dst: pathDst, //缩略图路径
-									overwrite: true, //是否生成新图片
-									quality: 10, //1-100,1图片最小，100图片最大
-									width: '40%', //缩略固定宽
-									height: '40%' //缩略固定高
-								},
-								(result) => {
-									let imgPathUrl = result.target;
-									let imgPathSize = result.size;
-									console.log('压缩后的体积', imgPathSize);
-									uni.uploadFile({
-										url: 'https://m.xliank.com/api/Upload/user_upload_picture', //仅为示例，非真实的接口地址
-										filePath: imgPathUrl,
-										name: 'image',
-										formData: {
-											'file_type': 2,
-											'name': '0.png',
-										},
-										success: (uploadFileRes) => {
-											const res1 = (new Function("return " +
-												uploadFileRes.data))();
-											console.log(res1);
-											if (res1.code == 200) {
-												uni.showToast({
-													title: res1.msg,
-													icon: 'none'
-												})
-												uni.hideLoading()
-												vm.id_card_img = res1.data.img_url_whole;
-												vm.card_img_id = res1.data.img_url;
-											} else {
-												uni.showToast({
-													title: res1.msg,
-													icon: 'none'
-												})
-											}
-
-										}
-									});
-								}
-							)
-						} else {
-							uni.uploadFile({
-								url: 'https://m.xliank.com/api/Upload/user_upload_picture', //仅为示例，非真实的接口地址
-								filePath: path,
-								name: 'image',
-								formData: {
-									'file_type': 2,
-									'name': '0.png',
-								},
-								success: (uploadFileRes) => {
-									const res1 = (new Function("return " + uploadFileRes.data))();
-									console.log(res1);
-									if (res1.code == 200) {
-										uni.showToast({
-											title: res1.msg,
-											icon: 'none'
-										})
-										uni.hideLoading()
-										vm.id_card_img = res1.data.img_url_whole;
-										vm.card_img_id = res1.data.img_url;
-									} else {
-										uni.showToast({
-											title: res1.msg,
-											icon: 'none'
-										})
-									}
-
-								}
-							});
-						}
-
-					}
-				});
-				// #endif
-				// #ifdef H5
-				var vm = this
-				uni.chooseImage({
-					count: 1, //默认9
-					sizeType: ['compressed'], //可以指定是原图还是压缩图，默认二者都有
-					sourceType: ['album'], //从相册选择
-					success: function(res) {
-						console.log(res);
-						uni.showLoading({
-							title: '加载中',
-							mask: true
-						})
 						var tempFilePaths = res.tempFilePaths;
 						uni.uploadFile({
 							url: 'https://m.xliank.com/api/Upload/user_upload_picture', //仅为示例，非真实的接口地址
@@ -226,12 +131,13 @@
 								'name': '0.png',
 							},
 							success: (uploadFileRes) => {
+								console.log(uploadFileRes);
 								const res1 = (new Function("return " + uploadFileRes.data))();
 								console.log(res1);
 								if (res1.code == 200) {
 									uni.showToast({
 										title: res1.msg,
-										icon: 'none'
+										icon: "none"
 									})
 									uni.hideLoading()
 									vm.id_card_img = res1.data.img_url_whole;
@@ -239,15 +145,13 @@
 								} else {
 									uni.showToast({
 										title: res1.msg,
-										icon: 'none'
+										icon: "none"
 									})
 								}
 							}
 						});
 					}
-				});
-				// #endif
-
+				})
 			},
 			// 上传身份证反面照片
 			getIDback() {
@@ -274,7 +178,9 @@
 							},
 							success: (uploadFileRes) => {
 								console.log(uploadFileRes);
-								const res1 = (new Function("return " + uploadFileRes.data))();
+
+								const res1 = (new Function("return " + uploadFileRes.data))
+									();
 								console.log(res1);
 								if (res1.code == 200) {
 									uni.showToast({
@@ -290,7 +196,6 @@
 										icon: 'none'
 									})
 								}
-
 							}
 						});
 					}
@@ -319,7 +224,8 @@
 							},
 							success: (uploadFileRes) => {
 								console.log(uploadFileRes);
-								const res1 = (new Function("return " + uploadFileRes.data))();
+								const res1 = (new Function("return " + uploadFileRes.data))
+									();
 								console.log(res1);
 								if (res1.code == 200) {
 									uni.showToast({
@@ -342,6 +248,7 @@
 				// #endif
 
 			},
+
 			// 确认修改按钮
 			submit() {
 				var vm = this

@@ -19,15 +19,18 @@
 			<graceBottomDialog :show="show3" v-on:closeDialog="closeDialog3">
 
 				<view slot="content">
-					<view class="grace-flex grace-flex-vcenter " style="width: 750rpx;height: 310rpx;background: #F0F0F0;">
+					<view class="grace-flex grace-flex-vcenter "
+						style="width: 750rpx;height: 310rpx;background: #F0F0F0;">
 						<view class="grace-space-between" style="margin-left: 98rpx;margin-top: -60rpx;">
 							<view @tap="share_wx_hy()" class=" grace-columns">
-								<image src="../../static2/weixinhaoyou.png" style=" width: 120rpx;height: 120rpx;"></image>
+								<image src="../../static2/weixinhaoyou.png" style=" width: 120rpx;height: 120rpx;">
+								</image>
 								<text style="font-size: 22rpx;margin-top: 18rpx;">分享给好友</text>
 							</view>
 
 							<view @tap="share_wx_pyq()" class=" grace-columns" style="margin-left: 97rpx;">
-								<image src="../../static2/pengyouquan.png" style=" width: 120rpx;height: 120rpx;"></image>
+								<image src="../../static2/pengyouquan.png" style=" width: 120rpx;height: 120rpx;">
+								</image>
 								<text style="font-size: 22rpx;margin-top: 18rpx;">分享到朋友圈</text>
 							</view>
 
@@ -73,7 +76,7 @@
 			var vm = this;
 			vm.req.post(
 				vm.lochost + '/share/get_share_data?uid=' + uid, {
-					uid:uid
+					uid: uid
 				}, {},
 				function(res) {
 					console.log(res);
@@ -116,7 +119,7 @@
 				this.showDialog3();
 			},
 			async shareFc(backgroundImage, text, name) {
-				try {
+				// try {
 					console.log('准备生成:' + new Date())
 					var sys = uni.getSystemInfoSync();
 					// const { screenWidth, screenHeight } = uni.getSystemInfoSync();	
@@ -147,16 +150,21 @@
 						// },
 						// ]
 						// },
-						drawArray: ({
+						drawArray: ({ //绘制序列
 							bgObj,
 							type,
-							bgScale
+							bgScale,
+							// setBgObj,	//动态设置画布(宽高),若使用该方法不建议背景图方式绘制, 建议使用background自定义画布绘制, 因为这个方法绘制修改背景图的宽高
+							// getBgObj	//获取动态设置的画布宽高
 						}) => {
 
 							const dx = bgObj.width * 0.5;
 							const fontSize = bgObj.width * 0.04;
 							const lineHeight = bgObj.height * 0.5;
-	//可直接return数组，也可以return一个promise对象, 但最终resolve一个数组, 这样就可以方便实现后台可控绘制海报
+							
+							// let myCanvas = uni.createCanvasContext('mycanvas', this);
+							// console.log(myCanvas);
+							//可直接return数组，也可以return一个promise对象, 但最终resolve一个数组, 这样就可以方便实现后台可控绘制海报
 							return new Promise((rs, rj) => {
 								rs([{
 										type: 'text',
@@ -167,19 +175,21 @@
 										textAlign: 'left',
 										textBaseline: 'middle',
 										infoCallBack(textLength) {
-											return {
+												return {
+													
+													// dx: bgObj.width * 0.44,
+													// dy: bgObj.width * 0.98
 												
-												// dx: bgObj.width * 0.44,
-												// dy: bgObj.width * 0.98
+													// 下面的dx和dy数据适配iPhone6/7/8系列
+													// dx: screenWidth - 207,
+													// dy: screenHeight - 180
 												
-												// 下面的dx和dy数据适配iPhone6/7/8系列
-												dx: screenWidth - 207,
-												dy: screenHeight - 180
-												
-												// 下面的dx和dy数据适配iPhoneX系列及其以上
-												// dx: bgObj.width * 0.44,
-												// dy: bgObj.width * 1.45
-											}
+													// 下面的dx和dy数据适配iPhoneX系列及其以上
+													dx: uni.getSystemInfoSync().uniPlatform=="app" ? plus.navigator.hasNotchInScreen()==true ? bgObj.width * 0.46:screenWidth - 207 : bgObj.width * 0.45,
+													dy: uni.getSystemInfoSync().uniPlatform=="app" ? plus.navigator.hasNotchInScreen()==true ? bgObj.width * 1.36:screenHeight - 180 : bgObj.width * 1.46
+												}
+
+											
 										}
 									},
 									{
@@ -187,14 +197,15 @@
 										text: text,
 										size: bgObj.width * 0.3,
 										backgroundColor: 'rgba(255,255,255,255)',
-										
-										// 下面的dx和dy数据适配iPhone6/7/8系列
-										dx: screenWidth - 245,
-										dy: screenHeight - 310,
-										
 										// 下面的dx和dy数据适配iPhoneX系列及其以上
-										// dx:	 bgObj.width * 0.345,
-										// dy:  bgObj.width * 1.09
+										
+										dx:	uni.getSystemInfoSync().uniPlatform=="app" ? plus.navigator.hasNotchInScreen()==true?bgObj.width * 0.34:screenWidth - 245 : bgObj.width * 0.34,
+										dy: uni.getSystemInfoSync().uniPlatform=="app" ?  plus.navigator.hasNotchInScreen()==true?bgObj.width * 1:screenHeight - 310 : bgObj.width * 1.1
+										// 下面的dx和dy数据适配iPhone6/7/8系列
+										// dx: screenWidth - 245,
+										// dy: screenHeight - 310,
+
+
 									}
 								]);
 							})
@@ -202,21 +213,23 @@
 						setCanvasWH: ({
 							bgObj,
 							type,
-							bgScale
+							bgScale,
+							// setBgObj,	//动态设置画布(宽高),若使用该方法不建议背景图方式绘制, 建议使用background自定义画布绘制, 因为这个方法绘制修改背景图的宽高
+							// getBgObj	//获取动态设置的画布宽高
 						}) => { // 为动态设置画布宽高的方法，
 							this.poster = bgObj;
 						}
 					});
-					console.log('海报生成成功, 时间:' + new Date() + '， 临时路径: ' + d.poster.tempFilePath)
+					// console.log('海报生成成功, 时间:' + new Date() + '， 临时路径: ' + d.poster.tempFilePath)
 					this.img_base64 = d.poster.tempFilePath;
 					this.poster.finalPath = d.poster.tempFilePath;
 					console.log(this.poster.finalPath);
 					this.qrShow = true;
-				} catch (e) {
-					_app.hideLoading();
-					_app.showToast(JSON.stringify(e));
-					console.log(JSON.stringify(e));
-				}
+				// } catch (e) {
+				// 	_app.hideLoading();
+				// 	_app.showToast(JSON.stringify(e));
+				// 	console.log(JSON.stringify(e));
+				// }
 			},
 			share() {
 				// #ifdef APP-PLUS
@@ -238,7 +251,7 @@
 					imageUrl: this.poster.finalPath,
 					success: function(res) {
 						console.log("success:" + JSON.stringify(res));
-						
+
 					},
 					fail: function(err) {
 						console.log("fail:" + JSON.stringify(err));

@@ -46,10 +46,10 @@
 			</view>
 		</graceBottomDialog>
 		<!-- 客服帮助 -->
-		<view class="kef_s" @tap="qiaozhuandaokehu">
+		<!-- <view class="kef_s" @tap="qiaozhuandaokehu">
 			<image :style="'left:'+moveX+'px;top:'+moveY+'px'" @touchstart="drag_start" @touchmove.prevent="drag_hmove" src="../../static2/kefs.png"
 			 mode="" style="width: 152rpx;height:79rpx;transform: translate(4rpx,4rpx);"></image>
-		</view>
+		</view> -->
 	</view>
 </template>
 
@@ -228,4 +228,4 @@
 .grace-flex-top  //flex 垂直顶端对齐
 .grace-flex-vcenter //flex 垂直居中对齐
 .grace-flex-bottom //flex 垂直底部对齐
-.grace-no-scale //元素不缩放 -->
+.grace-no-scale //元素不缩放

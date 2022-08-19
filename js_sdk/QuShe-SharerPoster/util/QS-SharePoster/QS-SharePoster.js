@@ -333,6 +333,8 @@ function drawShareImage (obj) { //绘制海报方法
 						height: bgObj.height,
 						destWidth: bgObj.width * 2, // 若H5使用这里请不要乘以二
 						destHeight: bgObj.height * 2, // 若H5使用这里请不要乘以二
+						// destWidth: bgObj.width * 2, // 若H5使用这里请不要乘以二
+						// destHeight: bgObj.height * 2, // 若H5使用这里请不要乘以二
 						quality: .8,
 						fileType: 'jpg',
 						...setObj

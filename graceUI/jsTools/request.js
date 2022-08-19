@@ -293,7 +293,7 @@ module.exports = {
 				}else{
 					console.log(url);
 					console.log('headerObj',headerObj);
-					console.log('data',data);
+					console.log('data',data); 
 					console.log(res);
 					if(res.statusCode!=200){
 						if(fail){

@@ -76,8 +76,8 @@
 					console.log(res);
 					vm.user_name = res.data.real_name;
 					vm.user_id = res.data.identity;
-					vm.id_card_img = res.data.u_idcard_img
-					vm.id_back_img = res.data.u_idcard_back
+					vm.id_card_img = res.data.u_idcard_img // 身份证正面图片
+					vm.id_back_img = res.data.u_idcard_back // 身份证反面图片
 				}
 			)
 			var pas = uni.getStorageSync('storage_key')
